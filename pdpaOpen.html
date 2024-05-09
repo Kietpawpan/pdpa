@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+<title>MNRE | PDPA</title>
+<head>
+
+    <base target="_top">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=yes;" />
+
+</head>
+  <body>
+<div class="w3-container" style="
+	height:200px;
+    padding-top:50px;
+    margin-bottom:50px;
+    color:white;
+    text-align:center;
+    background-image:url('https://kietpawpan.github.io/images/003.jpg');
+@media screen and (min-width: 1024px) {
+    body{
+        margin: auto;
+        width: 50vw;
+    }
+}	
+    ">
+      <h1>แนวทางการพิจารณามีคำสั่ง <br>กรณีมีผู้ขอข้อมูลส่วนบุคคล</h1>
+    </div>
+<div style="
+	margin-top:-270px;
+	margin-bottom:50px;
+	margin-left:20px;
+	">
+<img src="img/mnre.png" style="width:150px;border:none;">
+</div>
+
+<a name="top"></a>
+<pre class="mermaid" style="margin-top:10px">
+flowchart LR
+    A[รับคำขอ<br>ข้อมูลส่วนบุคคล] --> B{ผู้ขอเป็นเจ้าของ?}
+    B -->|Yes| C{มีกฎหมายห้ามเปิดเผย<br>หรือศาลสั่งห้าม<br>หรือกระทบสิทธิเสรีภาพ<br>ของบุคคลอื่น?}
+         B -->|No| E{ได้รับความยินยอม?}
+         C --> |Yes| D[<font color="red">ไม่เปิดเผย </font><br><a href="#30v2">ตามมาตรา 30 วรรค 2 PDPA</a>]-->N[บันทึกการปฏิเสธคำขอ<br><a href="#30v3">ตามมาตรา 30 วรรคสาม</a><br>ประกอบ<a href="#39">มาตรา 39</a> PDPA]
+    C-->|No| G[<font color="blue">เปิดเผย</font> <br><a href="#30">ตามมาตรา 30 PDPA</a>]
+E-->|Yes| C
+E-->|No| F{กฎหมายอื่นให้เปิดเผย?}
+F-->|Yes| H[<font color="blue">เปิดเผย</font><br>ตาม<a href="#24ioa">มาตรา 24</a> OIA ประกอบ<a href="#19">มาตรา 19</a> PDPA]
+F-->|No| I{ยกเว้นตาม<a href="#24">มาตรา 24</a> หรือ<br><a href="#26">มาตรา 26</a> PDPA?}
+I-->|Yes| K[<font color="blue">เปิดเผย</font><br>ตาม<a href="#27">มาตรา 27</a> PDPA]
+I-->|No| J[<font color="red">ไม่เปิดเผย</font><br>ตาม<a href="#27">มาตรา 27 PDPA</a>]-->N
+K-->L[บันทึกการเปิดเผยใน ROPA<br>ตาม<a href="#27v3">มาตรา 27 วรรคสาม</a>]
+K-->M[ผู้ขอต้องไม่ใช้หรือเปิดเผยเพื่อวัตถุประสงค์อื่น<br>นอกเหนือจากที่แจ้ง<br>ตาม<a href="#27v2">มาตรา 27 วรรคสอง</a>]
+H-->P{เปิดเผยต่อ จนท.<br>ภายในหน่วยงานของรัฐ<br>หรือใช้ตามวัตถุประสงค์ปกติ<br>ภายในหน่วยงานของรัฐ?}
+P-->|Yes| O[จบ]
+P-->|No| Q[จัดทำบัญชีแสดงการเปิดเผย<br><a href="#24v2ioa">ตามมาตรา 24 วรรคสอง</a> IOA และ<br><a href="pdf/reg24v2ioa.pdf">กฎกระทรวง</a>]
+G-->R[ดำเนินการตามคำขอโดยไม่ชักช้า<br>แต่ต้องไม่เกิน 30 วัน<br>นับแต่วันที่ได้รับคำขอ<br>ตาม<a href="#30v4">มาตรา 30 วรรคสี่</a> PDPA]
+
+
+
+
+</pre>
+
+<div class="org">ศูนย์บริการร่วม กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม<br>โทร. 0 2265 6223-5; อีเมล servicelinkcenter@mnre.go.th</div>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+
+<style>
+img {
+  border: 1px solid #555;
+}
+div.img{
+	margin-top:1700px;
+}
+div.org{
+	background-color:darkgreen;
+	color:white;
+	font-family:"Kanit";
+	padding-left:10px;
+}
+</style>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="img">
+<a name="30v2">
+<img src="img/30v2.png"></a>
+<br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="30">
+<img src="img/30.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="30v3">
+<img src="img/30v3.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="39">
+<img src="img/39.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="27">
+<img src="img/27.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="27v3">
+<img src="img/27v3.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="27v2">
+<img src="img/27v2.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="24">
+<img src="img/24.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="26">
+<img src="img/26.png"></a><br>
+
+<a name="26b">
+<img src="img/26b.png"></a><br>
+
+<a name="26c">
+<img src="img/26c.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+
+<div class="img">
+<a name="19">
+<img src="img/19.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="24ioa">
+<img src="img/24ioa.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+<div class="img">
+<a name="30v4">
+<img src="img/30v4.png"></a><br>
+<a href="#top">Back</a>
+</div>
+
+
+<div class="img">
+<a name="24v2ioa">
+<img src="img/24v2ioa.png"></a><br>
+<a href="#top">Back</a>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+</html>
