@@ -1,7 +1,7 @@
 # pdpa
 >[!NOTE]
 >[ภาพรวมงานคุ้มครองข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/tasks.html)
->
+
 >[!NOTE]
 >[แนวทางการพิจารณาคำขอข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/)
 
