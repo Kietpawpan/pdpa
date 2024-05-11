@@ -1,7 +1,7 @@
 # pdpa
 
 - [ภาพรวมงานคุ้มครองข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/tasks.html)
-
+```mermaid
 sequenceDiagram
 	ผู้ควบคุม-->>เจ้าของ: แจ้งประกาศความเป็นส่วนตัว (Privacy Notice)
 	Note over เจ้าของ: อ่าน/รับทราบ
@@ -18,7 +18,7 @@ sequenceDiagram
 	ผู้ควบคุม-->>สคส.: แจ้งเหตุละเมิด (ถ้ามีความเสี่ยงต่อสิทธิเสรีภาพของเจ้าขอ)
 	Note over ผู้ควบคุม: ทบทวนมาตรการคุ้มครองข้อมูลส่วนบุคคล
 	ผู้ควบคุม-->>ผู้ประมวลผล: จัดทำข้อตกลง
-
+```
 
 - [แนวทางการพิจารณาคำขอข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/)
 - [มาตรการคุ้มครองข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/measures.html)
