@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<title>MNRE | PDPA</title>
+<head>
+
+    <base target="_top">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=yes;" />
+
+</head>
+  <body>
+<div class="w3-container" style="
+	height:200px;
+    padding-top:50px;
+    margin-bottom:50px;
+    color:white;
+    text-align:center;
+    background-image:url('https://kietpawpan.github.io/images/003.jpg');
+@media screen and (min-width: 1024px) {
+    body{
+        margin: auto;
+        width: 50vw;
+    }
+}	
+    ">
+      <h1>งานคุ้มครองข้อมูลส่วนบุคคล</h1>
+    </div>
+
+<a name="top"></a>
+<pre class="mermaid" style="margin-top:10px">
+sequenceDiagram
+	ผู้ควบคุม-->>เจ้าของ: แจ้งประกาศความเป็นส่วนตัว (Privacy Notice)
+	Note over เจ้าของ: อ่าน/รับทราบ
+	เจ้าของ->>ผู้ควบคุม:ให้/เก็บข้อมูลส่วนบุคคล
+	Note over ผู้ควบคุม: กำหนดมาตรการคุ้มครองข้อมูลส่วนบุคคล
+	Note over ผู้ควบคุม: บันทึกกิจกรรมการประมวลผลข้อมูลส่วนบุคคล
+	Note over ผู้ควบคุม: จัดให้มีช่องทางการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล
+	เจ้าของ-->>ผู้ควบคุม:ขอใช้สิทธิ์ (ถ้ามีความประสงค์)
+	Note over ผู้ควบคุม: พิจารณาคำขอเกี่ยวข้องข้อมูลส่วนบุคคลและดำเนินการตามกฎหมาย
+	Note over ผู้ควบคุม: จัดให้มีช่องทางการแจ้งเหตุละเมิดข้อมูลส่วนบุคคล
+	เจ้าของ-->>ผู้ควบคุม:แจ้งเหตุละเมิด (ถ้าพบ)
+	Note over ผู้ควบคุม: ตรวจสอบข้อเท็จจริงการละเมิด
+	ผู้ควบคุม-->>เจ้าของ: แจ้งเหตุละเมิด (ถ้ามีความเสี่ยงสูงต่อสิทธิเสรีภาพของเจ้าของ)
+	ผู้ควบคุม-->>สคส.: แจ้งเหตุละเมิด (ถ้ามีความเสี่ยงต่อสิทธิเสรีภาพของเจ้าขอ)
+	Note over ผู้ควบคุม: ทบทวนมาตรการคุ้มครองข้อมูลส่วนบุคคล
+	ผู้ควบคุม-->>ผู้ประมวลผล: จัดทำข้อตกลง
+
+
+</pre>
+
+
+
+
+
+
+
+<div class="org">&copy; 2024 ศูนย์บริการร่วม ทส. <a href="cover.html" style="text-decoration: none;color:white"> | คู่มือ GPPC</a></div> 
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+
+<style>
+img {
+  border: 1px solid #555;
+}
+div.img{
+	margin-top:1700px;
+}
+div.org{
+	background-color:green;
+	color:white;
+	font-family:"Kanit";
+	padding-left:10px;
+	text-decoration: none;
+}
+</style>
+
+  </body>
+</html>
