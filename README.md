@@ -60,7 +60,5 @@ sequenceDiagram
 			Form_Validation-->Htmlspecialcharacter
 			Htmlspecialcharacter-->Enable_Logging
 			Enable_Logging-->Regular_Password_Change
-			Regular_Password_Change-->[*]
-}}}
-
-  ```
+			Regular_Password_Change-->[*]}}}
+```
