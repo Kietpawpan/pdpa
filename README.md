@@ -3,6 +3,7 @@
 - [ภาพรวมงานคุ้มครองข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/tasks.html)
 ```mermaid
 sequenceDiagram
+	Note over ผู้ควบคุม: บันทึกรายการกิจกรรมการประมวลผล (record of processing activities)
 	Note over ผู้ควบคุม: ประกาศนโยบายคุ้มครองข้อมูลส่วนบุคคล (privacy policy)
 	ผู้ควบคุม-->>เจ้าของ: แจ้งประกาศความเป็นส่วนตัว (privacy notice)
 	Note over เจ้าของ: อ่าน/รับทราบ
