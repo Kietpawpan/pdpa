@@ -98,5 +98,4 @@ quadrantChart
     Index Browsing: [0.9, 0.7]
     National ID Leak: [0.78, 0.34]
     Sever damage: [0.2, 0.7]
-	Bank account data leak: [0.1, 0.1]
 ```
