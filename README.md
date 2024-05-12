@@ -88,7 +88,7 @@ sequenceDiagram
 quadrantChart
     title Risk of Personal Data Breach
     x-axis Unidentificable --> Identificable
-    y-axis Not Affect Rights --> Affect Rights
+    y-axis Not Affect Rights/Operation --> Affect Rights
     quadrant-1 High Risk
     quadrant-2 Moderate Risk
     quadrant-3 Negligible Risk
