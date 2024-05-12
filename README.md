@@ -128,9 +128,9 @@ block-beta
     columns 2
     Mailbox PC
   end
-  Sever
+  PPT
   block:group2:3
     %% columns auto (default)
-    Document LINE 
+    Document LINE e-Tracking_Server
   end
 ```
