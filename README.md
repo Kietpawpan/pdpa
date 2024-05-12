@@ -123,10 +123,10 @@ quadrantChart
 ```mermaid
 block-beta
   columns 3
-  Client's device:3
+  Client_device:3
   block:group1:2
     columns 2
-    Mailbox PC 
+    Mailbox PC
   end
   Sever Computer
   block:group2:3
