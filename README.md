@@ -87,8 +87,8 @@ sequenceDiagram
 ```mermaid
 quadrantChart
     title Risk of Personal Data Breach
-    x-axis นำไปสร้างความเสียหายไม่ได้ --> นำไปสร้างความเสียหายได้
-    y-axis ละเมิดยาก --> ละเมิดง่าย
+    x-axis Unidentificable --> Identificable
+    y-axis Not Affect Rights --> Affect Rights
     quadrant-1 High Risk
     quadrant-2 Moderate Risk
     quadrant-3 Negligible Risk
