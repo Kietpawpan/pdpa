@@ -151,10 +151,10 @@ stateDiagram
 
    [*] --> eRequest:::notMoving
    eRequest--> eMail:::movement
-   eMail --> Opened:::badBadEvent
-	Opened:::badBadEvent-->Deleted:::badBadEvent
-Opened:::badBadEvent-->Forwarded:::badBadEvent
-   Opened:::badBadEvent --> Printed:::badBadEvent
+   eMail --> Checked:::badBadEvent
+	Checked:::badBadEvent-->Deleted:::badBadEvent
+Checked:::badBadEvent-->Forwarded:::badBadEvent
+   Checked:::badBadEvent --> Printed:::badBadEvent
 Printed:::badBadEvent-->Coppied:::badBadEvent
 Coppied:::badBadEvent-->Delivered:::badBadEvent
 Coppied:::badBadEvent-->DocAndPPTFiles:::badBadEvent
