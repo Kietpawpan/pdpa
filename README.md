@@ -87,8 +87,8 @@ sequenceDiagram
 ```mermaid
 quadrantChart
     title Risk of Personal Data Breach
-    x-axis Low Probability --> High Probability
-    y-axis Low Impact --> High Impact
+    x-axis นำไปสร้างความเสียหายไม่ได้ --> นำไปสร้างความเสียหายได้
+    y-axis ละเมิดยาก --> ละเมิดง่าย
     quadrant-1 High Risk
     quadrant-2 Moderate Risk
     quadrant-3 Negligible Risk
