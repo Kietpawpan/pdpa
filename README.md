@@ -86,7 +86,7 @@ sequenceDiagram
 # การประเมินความเสี่ยง
 ```mermaid
 quadrantChart
-    title Risk of Personal Data Bread
+    title Risk of Personal Data Breach
     x-axis Low Probability --> High Probability
     y-axis Low Impact --> High Impact
     quadrant-1 High Risk
