@@ -169,22 +169,23 @@ Receipt:::badBadEvent-->GetDocument:::badBadEvent
 GetDocument:::badBadEvent-->DestroyData:::badBadEvent
 DestroyData:::badBadEvent-->[*]
 ```
-# Key Risk
+# Key Risk with Email
 ```mermaid
 mindmap
   Data Breach((mindmap))
     Confidentiality
       แอบดูข้อมูลในอีเมล
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
+      เปิดเผยคำขอโดยมิชอบ
+        ส่งต่อไปยังบุคคลอื่น
+	แอบอ่านคำขอที่เป็นกระดาษ
+	แอบทำสำเนาหรือถ่ายรูป
     Availability
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
+      อีเมลถูกเปลี่ยนรหัสโดย hacker
+      เข้าใช้อีเมลไม่ได้
+        รหัสผ่าน
+            ลืมรหัสผ่าน
+            ไม่ทำตามเงื่อนไขของผู้ให้บริการ
     Integrity
       Pen and paper
       Mermaid
