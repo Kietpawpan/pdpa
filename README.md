@@ -93,8 +93,8 @@ quadrantChart
     quadrant-2 Mitigation
     quadrant-3 No action
     quadrant-4 Preparedness 
-	Server Access: [0.3, 0.90]
-    Campaign B: [0.45, 0.23]
+	Server Access: [0.3, 0.9]
+    	Email leak: [0.9, 0.9]
     Campaign C: [0.57, 0.69]
     Campaign D: [0.78, 0.34]
     Campaign E: [0.40, 0.34]
