@@ -122,8 +122,8 @@ quadrantChart
 # Information Assets
 ```mermaid
 block-beta
-  columns 4
-  Client_device:4
+  columns 3
+  Client_device:3
   block:group1:2
     columns 2
     Mailbox PC
@@ -134,8 +134,8 @@ block-beta
     LINE_OA e_Tracking_Server Meeting_Room Meeting_Document
   block:group3:2
    %% columns auto (default)
-	test1
+	test1 test2
   end
-	test2
+	test3
 end
 ```
