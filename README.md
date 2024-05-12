@@ -89,8 +89,8 @@ quadrantChart
     title Risk of Personal Data Bread
     x-axis Low Probability --> High Probability
     y-axis Low Impact --> High Impact
-    quadrant-1 Moderate Risk
-    quadrant-2 High Risk
+    quadrant-1 High Risk
+    quadrant-2 Moderate Risk
     quadrant-3 Negligible Risk
     quadrant-4 Low Risk
 	Server Access: [0.3, 0.9]
