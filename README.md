@@ -122,9 +122,9 @@ quadrantChart
 # Information Assets
 ```mermaid
 block-beta
-  columns 3
-  Client_device:3
-  block:group1:2
+  columns 4
+  Client_device:4
+  block:group1:3
     columns 2
     Mailbox PC
   end
