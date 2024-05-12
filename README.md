@@ -93,7 +93,7 @@ quadrantChart
     quadrant-2 Have mitigative measure
     quadrant-3 No action
     quadrant-4 Have operational plan
-    Campaign A: [0.3, 0.6]
+    แอบดูข้อมูลใน Server: [0.3, 1.0]
     Campaign B: [0.45, 0.23]
     Campaign C: [0.57, 0.69]
     Campaign D: [0.78, 0.34]
