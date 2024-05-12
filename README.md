@@ -89,10 +89,10 @@ quadrantChart
     title Risk of Personal Data Bread
     x-axis Low Probability --> High Probability
     y-axis Low Impact --> High Impact
-    quadrant-1 Have preventive measures
-    quadrant-2 Have mitigative measure
+    quadrant-1 Prevention
+    quadrant-2 Mitigation
     quadrant-3 No action
-    quadrant-4 Have operational plan
+    quadrant-4 Preparedness 
 	Server Access: [0.3, 0.90]
     Campaign B: [0.45, 0.23]
     Campaign C: [0.57, 0.69]
