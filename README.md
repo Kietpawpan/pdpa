@@ -149,9 +149,9 @@ stateDiagram
    classDef movement font-style:italic;
    classDef badBadEvent fill:#f00,color:white,font-weight:bold,stroke-width:2px,stroke:yellow
 
-   [*] --> e-Request:::notMoving
-   e-Request --> [*]
-   e-Request --> Moving:::movement
+   [*] --> A["e-Request"]:::notMoving
+   A["e-Request"] --> [*]
+   A["e-Request"]--> Moving:::movement
    Moving --> Still
    Moving --> Crash:::movement
    Crash:::badBadEvent --> [*]
