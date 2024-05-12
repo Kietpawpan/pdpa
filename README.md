@@ -172,20 +172,20 @@ DestroyData:::badBadEvent-->[*]
 # Key Risk
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
+  Data Breach((mindmap))
+    Confidentiality
       Long history
       ::icon(fa fa-book)
       Popularisation
         British popular psychology author Tony Buzan
-    Research
+    Availability
       On effectiveness<br/>and features
       On Automatic creation
         Uses
             Creative techniques
             Strategic planning
             Argument mapping
-    Tools
+    Integrity
       Pen and paper
       Mermaid
 ```
