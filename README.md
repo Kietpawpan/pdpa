@@ -151,6 +151,8 @@ stateDiagram
 
    [*] --> eRequest:::notMoving
    eRequest--> eMail:::movement
-   eMail --> Opened:::movement
+   eMail --> Opened:::badBadEvent
+	Opened:::badBadEvent-->Deleted:::badBadEvent
+Opened:::badBadEvent-->Forwarded:::badBadEvent
    Opened:::badBadEvent --> [*]
 ```
