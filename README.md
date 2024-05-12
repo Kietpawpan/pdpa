@@ -172,7 +172,7 @@ DestroyData:::badBadEvent-->[*]
 # Key Risk with Email
 ```mermaid
 mindmap
-  Data Breach((mindmap))
+  Data Breach((Mailbox))
     Confidentiality
       แอบดูข้อมูลในอีเมล
       ::icon(fa fa-book)
