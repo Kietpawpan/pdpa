@@ -169,7 +169,7 @@ Receipt:::badBadEvent-->GetDocument:::badBadEvent
 GetDocument:::badBadEvent-->DestroyData:::badBadEvent
 DestroyData:::badBadEvent-->[*]
 ```
-# Key Risk with Email
+# Key Risks with Email
 ```mermaid
 mindmap
   Data Breach((Mailbox))
