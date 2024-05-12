@@ -163,5 +163,8 @@ Meeting:::badBadEvent-->MeetingReport:::badBadEvent
 MeetingReport:::badBadEvent-->Reply:::badBadEvent
 Reply:::badBadEvent-->eTrackingUpdated:::badBadEvent
 eTrackingUpdated:::badBadEvent-->eTracking:::badBadEvent
-eTracking:::badBadEvent-->[*]
+eTracking:::badBadEvent-->payFee:::badBadEvent
+payFee:::badBadEvent-->Receipt:::badBadEvent
+Receipt:::badBadEvent-->GetDocument:::badBadEvent
+GetDocument:::badBadEvent-->[*]
 ```
