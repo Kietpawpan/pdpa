@@ -132,7 +132,7 @@ block-beta
   block:group2:3
     %% columns auto (default)
     LINE_OA e_Tracking_Server Meeting_Room Meeting_Document
-  block:group3:4
+  block:group3:2
    %% columns auto (default)
 	test1
   end
