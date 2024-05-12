@@ -128,9 +128,9 @@ block-beta
     columns 2
     Mailbox PC
   end
-  Sever Computer
+  Sever
   block:group2:3
     %% columns auto (default)
-    l m n o p q r
+    Document LINE 
   end
 ```
