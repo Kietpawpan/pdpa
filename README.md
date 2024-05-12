@@ -86,9 +86,9 @@ sequenceDiagram
 # การประเมินความเสี่ยง
 ```mermaid
 quadrantChart
-    title Reach and engagement of campaigns
-    x-axis Low Reach --> High Reach
-    y-axis Low Engagement --> High Engagement
+    title Risk of Personal Data Bread
+    x-axis Low Probability --> High Probability
+    y-axis Low Impact --> High Impact
     quadrant-1 We should expand
     quadrant-2 Need to promote
     quadrant-3 Re-evaluate
