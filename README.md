@@ -98,5 +98,5 @@ quadrantChart
     Index Browsing: [0.9, 0.7]
     National ID Leak: [0.78, 0.34]
     Sever damage: [0.2, 0.7]
-    Campaign F: [0.35, 0.78]
+	Bank account data leak: [0.1, 0.1]
 ```
