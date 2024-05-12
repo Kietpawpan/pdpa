@@ -166,5 +166,6 @@ eTrackingUpdated:::badBadEvent-->eTracking:::badBadEvent
 eTracking:::badBadEvent-->payFee:::badBadEvent
 payFee:::badBadEvent-->Receipt:::badBadEvent
 Receipt:::badBadEvent-->GetDocument:::badBadEvent
-GetDocument:::badBadEvent-->[*]
+GetDocument:::badBadEvent-->DestroyData:::badBadEvent
+DestroyData:::badBadEvent-->[*]
 ```
