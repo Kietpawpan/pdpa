@@ -174,7 +174,7 @@ DestroyData:::badBadEvent-->[*]
 mindmap
   Data Breach((mindmap))
     Confidentiality
-      Long history
+      แอบดูข้อมูลในอีเมล
       ::icon(fa fa-book)
       Popularisation
         British popular psychology author Tony Buzan
