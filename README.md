@@ -145,7 +145,7 @@ stateDiagram
    accTitle: e-Tracking Risk
    accDescr: This is an accessible description
 
-   classDef notMoving fill:white
+   classDef notMoving fill:grey
    classDef movement font-style:italic;
    classDef badBadEvent fill:#f00,color:white,font-weight:bold,stroke-width:2px,stroke:yellow
 
