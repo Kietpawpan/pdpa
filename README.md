@@ -119,3 +119,18 @@ quadrantChart
     Hashed National ID: [0.1, 0.34]
     Server Data Backup: [0.6, 0.1]
 ```
+# Information Assets
+```mermaid
+block-beta
+  columns 3
+  Client's device:3
+  block:group1:2
+    columns 2
+    Mailbox PC 
+  end
+  Sever Computer
+  block:group2:3
+    %% columns auto (default)
+    l m n o p q r
+  end
+```
