@@ -155,5 +155,13 @@ stateDiagram
 	Opened:::badBadEvent-->Deleted:::badBadEvent
 Opened:::badBadEvent-->Forwarded:::badBadEvent
    Opened:::badBadEvent --> Printed:::badBadEvent
-Printed:::badBadEvent-->Copied:::badBadEvent
+Printed:::badBadEvent-->Coppied:::badBadEvent
+Coppied:::badBadEvent-->Delivered:::badBadEvent
+Coppied:::badBadEvent-->DocAndPPTFiles:::badBadEvent
+DocAndPPTFiles:::badBadEvent-->Meeting:::badBadEvent
+Meeting:::badBadEvent-->MeetingReport:::badBadEvent
+MeetingReport:::badBadEvent-->Reply:::badBadEvent
+Reply:::badBadEvent-->eTrackingUpdated:::badBadEvent
+eTrackingUpdated:::badBadEvent-->eTracking:::badBadEvent
+eTracking:::badBadEvent-->[*]
 ```
