@@ -104,3 +104,18 @@ quadrantChart
     National ID Leak: [0.78, 0.34]
     Sever damage: [0.2, 0.7]
 ```
+```mermaid
+quadrantChart
+    title Risk Management
+    x-axis Unidentificable --> Identificable
+    y-axis Not Affect Rights/Operation --> Affect Rights/Operation
+    quadrant-1 High Risk
+    quadrant-2 Moderate Risk
+    quadrant-3 Negligible Risk
+    quadrant-4 Low Risk
+	Server Login Control: [0.3, 0.9]
+    	Confidential Email: [0.9, 0.9]
+    Disable Index Browsing: [0.9, 0.7]
+    Hashed National ID: [0.78, 0.34]
+    Server Data Backup: [0.2, 0.7]
+```
