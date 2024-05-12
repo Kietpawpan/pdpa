@@ -150,9 +150,7 @@ stateDiagram
    classDef badBadEvent fill:#f00,color:white,font-weight:bold,stroke-width:2px,stroke:yellow
 
    [*] --> eRequest:::notMoving
-   eRequest --> [*]
-   eRequest--> Moving:::movement
-   Moving --> Still
-   Moving --> Crash:::movement
-   Crash:::badBadEvent --> [*]
+   eRequest--> eMail:::movement
+   eMail --> Opened:::movement
+   Opened:::badBadEvent --> [*]
 ```
