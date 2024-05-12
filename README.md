@@ -82,7 +82,7 @@ sequenceDiagram
 			Enable_Logging-->Regular_Password_Change
 			Regular_Password_Change-->Server_Backup
 			Server_Backup-->[*]}}}
-```
+```https://github.com/Kietpawpan/pdpa/edit/main/README.md
 # การประเมินความเสี่ยง
 เพื่อควบคุมให้มีความเสี่ยงต่ำหรือไม่มีนัยสำคัญ
 1. ถ้ามีผลกระทบต่อสิทธิเสรีภาพสูง ต้องทำให้ข้อมูลให้ระบุตัวตนไม่ได้ เช่น เข้ารหัส หรือปกปิดบางส่วน
@@ -113,9 +113,9 @@ quadrantChart
     quadrant-2 Moderate Risk
     quadrant-3 Negligible Risk
     quadrant-4 Low Risk
-	Server Login System: [0.3, 0.1]
+	Server Login System: [0.5, 0.4]
     	Confidential Email: [0.9, 0.2]
-    Disable Index Browsing: [0.9, 0.3]
+    Disable Index Browsing: [0.7, 0.3]
     Hashed National ID: [0.1, 0.34]
     Server Data Backup: [0.6, 0.1]
 ```
