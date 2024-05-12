@@ -131,7 +131,7 @@ block-beta
   PPT
   block:group2:3
     %% columns auto (default)
-    ["LINE OA"] e_Tracking_Server Meeting_Room Meeting_Document
+    A["LINE OA"] e_Tracking_Server Meeting_Room Meeting_Document
 end
   block:group3:3
   	Folder Table Bin
