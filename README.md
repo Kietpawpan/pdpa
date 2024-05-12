@@ -172,7 +172,7 @@ DestroyData:::badBadEvent-->[*]
 # Key Risks with Email
 ```mermaid
 mindmap
-  Data Breach((Mailbox))
+  Root((Mailbox))
     Confidentiality
       แอบดูข้อมูลในอีเมล
       ::icon(fa fa-book)
@@ -193,5 +193,4 @@ mindmap
          กรอกข้อมูลไม่ครบถ้วน
       เจ้าหน้าที่
          สั่งพิมพ์หรือจัดชุดเอกสารคลาดเคลื่อน
-         กรอกข้อมูลในระบบ e-Tracking คลาดเคลื่อน
 ```
