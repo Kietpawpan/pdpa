@@ -113,9 +113,9 @@ quadrantChart
     quadrant-2 Moderate Risk
     quadrant-3 Negligible Risk
     quadrant-4 Low Risk
-	Server Login Control: [0.3, 0.9]
-    	Confidential Email: [0.9, 0.9]
-    Disable Index Browsing: [0.9, 0.7]
-    Hashed National ID: [0.78, 0.34]
-    Server Data Backup: [0.2, 0.7]
+	Server Login System: [0.3, 0.1]
+    	Confidential Email: [0.9, 0.2]
+    Disable Index Browsing: [0.9, 0.3]
+    Hashed National ID: [0.1, 0.34]
+    Server Data Backup: [0.6, 0.1]
 ```
