@@ -89,10 +89,10 @@ quadrantChart
     title Risk of Personal Data Bread
     x-axis Low Probability --> High Probability
     y-axis Low Impact --> High Impact
-    quadrant-1 We should expand
-    quadrant-2 Need to promote
-    quadrant-3 Re-evaluate
-    quadrant-4 May be improved
+    quadrant-1 Have preventive measures
+    quadrant-2 Have mitigative measure
+    quadrant-3 No action
+    quadrant-4 Have operational plan
     Campaign A: [0.3, 0.6]
     Campaign B: [0.45, 0.23]
     Campaign C: [0.57, 0.69]
