@@ -82,7 +82,7 @@ sequenceDiagram
 			Enable_Logging-->Regular_Password_Change
 			Regular_Password_Change-->Server_Backup
 			Server_Backup-->[*]}}}
-```https://github.com/Kietpawpan/pdpa/edit/main/README.md
+```
 # การประเมินความเสี่ยง
 เพื่อควบคุมให้มีความเสี่ยงต่ำหรือไม่มีนัยสำคัญ
 1. ถ้ามีผลกระทบต่อสิทธิเสรีภาพสูง ต้องทำให้ข้อมูลให้ระบุตัวตนไม่ได้ เช่น เข้ารหัส หรือปกปิดบางส่วน
