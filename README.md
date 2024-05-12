@@ -123,7 +123,7 @@ quadrantChart
 ```mermaid
 block-beta
   columns 3
-  Client_device:3
+  Z["Client's device"]:3
   block:group1:2
     columns 2
     Mailbox PC
