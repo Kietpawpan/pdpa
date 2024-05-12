@@ -20,7 +20,7 @@ sequenceDiagram
 	Note over ผู้ควบคุม: ทบทวนมาตรการคุ้มครองข้อมูลส่วนบุคคล
 	ผู้ควบคุม-->>ผู้ประมวลผล: จัดทำข้อตกลง
 ```
-- [แนวทางการพิจารณาคำขอข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/)
+- [แนวทางการพิจารณาคำขอข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/flow.html)
 ```mermaid
   flowchart LR
     A[รับคำขอ<br>ข้อมูลส่วนบุคคล] --> B{ผู้ขอเป็นเจ้าของ?}
@@ -114,7 +114,7 @@ quadrantChart
     quadrant-3 Negligible Risk
     quadrant-4 Low Risk
 	Server Login System: [0.5, 0.4]
-    	Confidential Email: [0.9, 0.2]
+    	Confidential Email: [0.9, 0.2]https://github.com/Kietpawpan/pdpa/edit/main/README.md
     Disable Index Browsing: [0.7, 0.3]
     Hashed National ID: [0.1, 0.34]
     Server Data Backup: [0.6, 0.1]
@@ -131,7 +131,7 @@ block-beta
   PPT
   block:group2:3
     %% columns auto (default)
-    A["LINE OA"] e_Tracking_Server Meeting_Room Meeting_Document
+    A["LINE OA"] B["e-Tracking Server"] C["Meeting Room"] D["Meeting Document"]
 end
   block:group3:3
   	Folder Table Bin
