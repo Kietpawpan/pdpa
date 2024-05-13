@@ -2,10 +2,10 @@
 ```mermaid
 timeline
     title History of Data Laws in Thailand
-    2540 : Officail Information Act
+    2540 : Official Information Act
     2562 : Personal Data Protection Act
-         : Administration and Public Service via Digital System Act
-    2565 : Electronic Public Operation Act
+         : Public Administration and Services via Digital Systems Act
+    2565 : Officail Electronic Operation Act
     2566 : Cybersecurity
 ```
 
