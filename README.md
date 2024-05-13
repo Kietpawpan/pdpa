@@ -1,12 +1,12 @@
 # pdpa
 ```mermaid
 timeline
-    title History of Social Media Platform
-    2002 : LinkedIn
-    2004 : Facebook
-         : Google
-    2005 : Youtube
-    2006 : Twitter
+    title History of Data Laws in Thailand
+    2540 : Officail Information Act
+    2562 : Personal Data Protection Act
+         : Administration and Public Service via Digital System Act
+    2565 : Electronic Public Operation Act
+    2566 : Cybersecurity
 ```
 
 - [ภาพรวมงานคุ้มครองข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/tasks.html)
