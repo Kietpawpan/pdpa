@@ -9,6 +9,15 @@ timeline
     2565 : Official Electronic Operation Act
     2566 : Cybersecurity Policy
 ```
+>[!WARNING]
+> - รักษาความลับของราชการ
+> --ข้อมูลเปิด
+>   
+> - คุ้มครองข้อมูลส่วนบุคคล
+>   
+> - รักษาความมั่นคงปลอดภัยไซเบอร์
+>   
+> - มาตรฐานการออกแบบแอพพลิเคชันภาครัฐ
 
 - [ภาพรวมงานคุ้มครองข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/tasks.html)
 ```mermaid
