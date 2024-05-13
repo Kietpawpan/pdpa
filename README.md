@@ -2,11 +2,12 @@
 ```mermaid
 timeline
     title History of Data Laws in Thailand
-    2540 : Official Information Act
-    2562 : Personal Data Protection Act
+    2540 : Official Information Act (OIA)
+    2562 : Personal Data Protection Act (PDPA)
          : Public Administration and Services via Digital Systems Act
+	 : Cybersecurity Act
     2565 : Officail Electronic Operation Act
-    2566 : Cybersecurity
+    2566 : Cybersecurity Policy
 ```
 
 - [ภาพรวมงานคุ้มครองข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/tasks.html)
