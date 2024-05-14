@@ -22,7 +22,7 @@ timeline
 > - มาตรฐานการออกแบบแอพพลิเคชันภาครัฐ
 
 # Cybersecurity
-ดำเนินการตาม (ประมวลแนวทางปฏิบัติและกรอบมาตรฐานด้านการรักษาความมั่นคงปลอดภัยไซเบอร์)[https://kietpawpan.github.io/pdpa/2565cyberGuide.pdf]
+ดำเนินการตาม [ประมวลแนวทางปฏิบัติและกรอบมาตรฐานด้านการรักษาความมั่นคงปลอดภัยไซเบอร์](https://kietpawpan.github.io/pdpa/pdf/2564cyberGuide.pdf)
 ```mermaid
 block-beta
   columns 3
