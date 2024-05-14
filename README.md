@@ -33,10 +33,7 @@ block-beta
  end
   block:group2:3
     %% columns auto (default)
-    A["LINE OA"] B["e-Tracking Server"] C["Meeting Room"] D["Meeting Document"]
-end
-  block:group3:3
-  	Folder Table Bin
+    Identify Protect Detect Respond Recover
 end
 ```
 - [ภาพรวมงานคุ้มครองข้อมูลส่วนบุคคล](https://kietpawpan.github.io/pdpa/tasks.html)
