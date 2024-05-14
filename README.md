@@ -30,6 +30,7 @@ block-beta
   %% columns auto (default)
     ประเมินความเสี่ยง
     แผนรับมือ
+ end
   block:group2:3
     %% columns auto (default)
     A["LINE OA"] B["e-Tracking Server"] C["Meeting Room"] D["Meeting Document"]
