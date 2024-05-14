@@ -26,10 +26,10 @@ timeline
 block-beta
   columns 3
   Z["ตรวจสอบ"]:3
-  block:group1:1
+  block:group1:3
+  %% columns auto (default)
     ประเมินความเสี่ยง
-  end
-  แผนรับมือ
+    แผนรับมือ
   block:group2:3
     %% columns auto (default)
     A["LINE OA"] B["e-Tracking Server"] C["Meeting Room"] D["Meeting Document"]
