@@ -89,7 +89,7 @@ end
       Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
       Rel(SystemC, customerA, "Sends e-mails to")
       Rel(SystemF, SystemB, "Edit")
-      Rel(Apache, SystemF, "Back up")
+      BiRel(Apache, SystemF, "Setting/Back up")
       Rel(Apache, SystemG, "Back up")
 
       UpdateElementStyle(customerA, $fontColor="red", $bgColor="grey", $borderColor="red")
