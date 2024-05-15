@@ -65,7 +65,7 @@ end
 
         System(SystemAA, "e-Request Web Application System", "อนุญาตให้ผู้ขอกรอก e-Form เพื่อสร้างคำขอข้อมูลข่าวสารของราชการและคัดลอกพื่อส่งคำขอทางอีเมล")
 
-        Enterprise_Boundary(b1, "MNRE Web Server") {
+        Enterprise_Boundary(b1, "MNRE") {
 
 
           System_Boundary(b2, "Elastic Cloud Server") {
