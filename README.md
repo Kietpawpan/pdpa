@@ -71,7 +71,7 @@ end
 
           System_Boundary(b2, "BankBoundary2") {
             System(SystemA, "Banking System A")
-            System(SystemB, "Banking System B", "A system of the bank, with personal bank accounts. next line.")
+            System(SystemB, "e-Tracking System", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
           }
 
           System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
