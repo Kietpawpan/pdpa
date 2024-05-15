@@ -75,8 +75,7 @@ end
           }
 
           System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
-          SystemDb(SystemD, "e-Tracking Database", "เก็บข้อมูลสถานะและรหัสคำขอ")
-
+      
           Boundary(b3, "BankBoundary3", "boundary") {
             SystemQueue(SystemF, "Banking System F Queue", "A system of the bank.")
             SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
