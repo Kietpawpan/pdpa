@@ -55,9 +55,9 @@ end
 บริการที่สำคัญ
 ```mermaid
     C4Context
-      title System Context diagram for e-Request System
+      title e-Request System Context
       Enterprise_Boundary(b0, "BankBoundary0") {
-        Person(customerA, "Infomation Customer A", "A customer of the bank, with personal bank accounts.")
+        Person(customerA, "Infomation Customer A", "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
         Person(customerB, "Infomation Customer B")
         Person_Ext(customerC, "Infomation Customer C", "desc")
 
