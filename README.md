@@ -123,7 +123,7 @@ end
 2. ใช้รหัสผ่านเข้าเครื่องคอมพิวเตอร์แม่ข่าย ที่คาดเดายาก (strong password)
 3. ติดตั้งใบรับรองความปลอดภัยอิเล็กทรอนนิกส์ (SSL Certificate) เพื่อเข้ารหัสการเชื่อมต่อเครื่องแม่ข่าย (https)
 4. ไม่มีการเก็บข้อมูลในสื่อบันทึกข้อมูลแบบถอดได้หรืออุปกรณ์เคลื่อนที่ และตั้งรหัสสำหรับ PC ที่เก็บสำรองไฟล์
-5. ลงโปรแกรม Antivirus, Firewall, Application Firewall, ระบบป้องกัน DDos Attack
+5. ติดตั้ง Firewall, Web Application Firewall, ระบบป้องกัน DDoS Attack, และโปรแกรม Antivirus, Update ซอฟแวร์ และ Operating System เป็นระยะ
 6. สร้างความตระหนักรู้เรื่อง Cybersecurity
 7. จัดทำแผนความต่อเนื่องทางธุรกิจ (Business Continuty Plan)
    
