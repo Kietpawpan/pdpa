@@ -65,7 +65,7 @@ end
 
         System(SystemAA, "e-Request Web Application System", "อนุญาตให้ผู้ขอกรอก e-Form เพื่อสร้างคำขอข้อมูลข่าวสารของราชการและคัดลอกพื่อส่งคำขอทางอีเมล")
 
-        Enterprise_Boundary(b1, "BankBoundary") {
+        Enterprise_Boundary(b1, "MNRE Web Server") {
 
           SystemDb_Ext(SystemE, "e-Tracking System", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
 
@@ -75,7 +75,7 @@ end
           }
 
           System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
-          SystemDb(SystemD, "Banking System D Database", "A system of the bank, with personal bank accounts.")
+          SystemDb(SystemD, "e-Tracking Database", "เก็บข้อมูลสถานะและรหัสคำขอ")
 
           Boundary(b3, "BankBoundary3", "boundary") {
             SystemQueue(SystemF, "Banking System F Queue", "A system of the bank.")
