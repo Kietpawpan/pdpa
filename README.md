@@ -57,11 +57,11 @@ end
     C4Context
       title e-Request System Context
       Enterprise_Boundary(b0, "ขอบเขตของระบบงานบริการข้อมูลข่าวสาร") {
-        Person(customerA, "Infomation Customer A", "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
-        Person(customerB, "Infomation Customer B")
-        Person_Ext(customerC, "Infomation Customer C", "desc")
+        Person(customerA, "Customer A", "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
+        Person(customerB, "Customer B")
+        Person_Ext(customerC, "Customer C", "desc")
 
-        Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+        Person(customerD, "Customer D", "A customer of the bank, <br/> with personal bank accounts.")
 
         System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
 
