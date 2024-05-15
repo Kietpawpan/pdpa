@@ -26,7 +26,7 @@ timeline
 ```mermaid
 block-beta
   columns 3
-  Z["แผนการตรวจสอบ"]:3
+  Z["แผนการตรวจสอบด้านความมั่นคงปลอดภัยไซเบอร์"]:3
   block:group1:3
   %% columns auto (default)
     ประเมินความเสี่ยง
