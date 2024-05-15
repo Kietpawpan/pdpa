@@ -67,7 +67,7 @@ end
 
         Enterprise_Boundary(b1, "BankBoundary") {
 
-          SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+          SystemDb_Ext(SystemE, "e-Tracking System", "เก็บข้อมูลสถานะคำขอและรหัสประจำตัวของผู้ขอข้อมูลข่าวสาร")
 
           System_Boundary(b2, "BankBoundary2") {
             System(SystemA, "Banking System A")
