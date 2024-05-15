@@ -70,8 +70,8 @@ end
           SystemDb_Ext(SystemE, "e-Tracking System", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
 
           System_Boundary(b2, "BankBoundary2") {
-            System(SystemA, "Banking System A")
-            System(SystemB, "e-Tracking System", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
+            System(SystemA, "e-Tracking User Interface", "รับรหัสคำขอ ตรวจสอบ และรายงานสถานะคำขอ")
+            System(SystemB, "e-Tracking Database", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
           }
 
           System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
