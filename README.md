@@ -71,6 +71,8 @@ end
           System_Boundary(b2, "Elastic Cloud Server") {
             System(SystemA, "e-Tracking User Interface", "รับรหัสคำขอ ตรวจสอบ และรายงานสถานะคำขอ")
             System(SystemB, "e-Tracking Database", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
+            System(Apache, "Web Server Files", "เก็บข้อมูลพื้นฐานของ Web Server")
+
           }
 
           System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
