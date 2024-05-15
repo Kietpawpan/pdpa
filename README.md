@@ -53,6 +53,7 @@ end
 
 ## การประเมินความเสี่ยง
 บริการที่สำคัญ
+> ระบบ e-Request มีการเก็บรวบรวมข้อมูลส่วนบุคคล
 ```mermaid
     C4Context
       title e-Request System Context
