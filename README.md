@@ -61,7 +61,7 @@ end
         Person(customerB, "Customer B")
         Person_Ext(customerC, "Customer C", "desc")
 
-        Person(customerD, "Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+        Person(customerD, "Customer D",  "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
 
         System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
 
