@@ -124,6 +124,7 @@ end
 5. สร้างความตระหนักรู้เรื่อง Cybersecurity
 6. จัดทำแผนความต่อเนื่องทางธุรกิจ (Business Continuty Plan)
    
+# การคุ้มครองข้อมูลส่วนบุคคล   
 ```mermaid
 sequenceDiagram
 	Note over ผู้ควบคุม: บันทึกรายการกิจกรรมการประมวลผล (record of processing activities)
