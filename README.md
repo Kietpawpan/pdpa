@@ -63,7 +63,7 @@ end
 
         Person(customerD, "Customer D",  "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
 
-        System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+        System(SystemAA, "e-Request Web Application System", "อนุญาตให้ผู้ขอกรอก e-Form เพื่อสร้างคำขอข้อมูลข่าวสารของราชการและคัดลอกพื่อส่งคำขอทางอีเมล")
 
         Enterprise_Boundary(b1, "BankBoundary") {
 
