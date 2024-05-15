@@ -68,7 +68,7 @@ end
         Enterprise_Boundary(b1, "MNRE Web Server") {
 
 
-          System_Boundary(b2, "BankBoundary2") {
+          System_Boundary(b2, "GDCC Elastic Cloud Server") {
             System(SystemA, "e-Tracking User Interface", "รับรหัสคำขอ ตรวจสอบ และรายงานสถานะคำขอ")
             System(SystemB, "e-Tracking Database", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
           }
