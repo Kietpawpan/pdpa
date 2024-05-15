@@ -87,7 +87,7 @@ end
       BiRel(customerA, SystemAA, "Uses")
       BiRel(SystemAA, SystemA, "Uses")
       Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
-      Rel(SystemC, customerA, "Sends e-mails to")
+      Rel(SystemC, customerA, "Reply")
       Rel(SystemF, SystemB, "Edit")
       BiRel(Apache, SystemF, "Setting/Back up")
       Rel(Apache, SystemG, "Back up")
