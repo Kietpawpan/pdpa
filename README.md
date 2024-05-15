@@ -88,6 +88,9 @@ end
       BiRel(SystemAA, SystemA, "Uses")
       Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
       Rel(SystemC, customerA, "Sends e-mails to")
+      Rel(SystemF, SystemB, "Edit")
+      Rel(Apache, SystemF, "Back up")
+
 
       UpdateElementStyle(customerA, $fontColor="red", $bgColor="grey", $borderColor="red")
       UpdateRelStyle(customerA, SystemAA, $textColor="blue", $lineColor="blue", $offsetX="5")
