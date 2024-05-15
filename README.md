@@ -58,10 +58,10 @@ end
       title e-Request System Context
       Enterprise_Boundary(b0, "ขอบเขตของระบบงานบริการข้อมูลข่าวสาร") {
         Person(customerA, "Customer A", "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
-        Person(customerB, "Customer B")
-        Person_Ext(customerC, "Customer C", "desc")
+ 	Person(customerB, "Customer D",  "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
+	Person_Ext(customerC, "Customer C", "desc")
 
-        Person(customerD, "Customer D",  "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
+      
 
         System(SystemAA, "e-Request Web Application System", "อนุญาตให้ผู้ขอกรอก e-Form เพื่อสร้างคำขอข้อมูลข่าวสารของราชการและคัดลอกพื่อส่งคำขอทางอีเมล")
 
