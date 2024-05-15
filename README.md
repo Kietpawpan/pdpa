@@ -92,7 +92,7 @@ end
       BiRel(Apache, SystemF, "Setting/Back up")
       Rel(Apache, SystemG, "Back up")
 
-      UpdateElementStyle(customerA, $fontColor="red", $bgColor="grey", $borderColor="red")
+      UpdateElementStyle(customerA, $fontColor="white", $bgColor="grey", $borderColor="red")
       UpdateRelStyle(customerA, SystemAA, $textColor="blue", $lineColor="blue", $offsetX="5")
       UpdateRelStyle(SystemAA, SystemE, $textColor="blue", $lineColor="blue", $offsetY="-10")
       UpdateRelStyle(SystemAA, SystemC, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
