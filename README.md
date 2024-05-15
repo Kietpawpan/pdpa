@@ -75,9 +75,9 @@ end
 
           System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
       
-          Boundary(b3, "MNRE Office Space", "boundary") {
-            SystemQueue(SystemF, "Personal Computer", "A backup site")
-            SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
+          Boundary(b3, "MNRE Office Space", "เจ้าหน้าที่ ศบร.ทส.") {
+            SystemQueue(SystemF, "Personal Computer", "อุปกรณ์สำรองข้อมูล")
+            SystemQueue_Ext(SystemG, "Computer Tablet", "อุปกรณ์สำรองข้อมูล")
           }
         }
       }
