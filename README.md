@@ -56,7 +56,7 @@ end
 ```mermaid
     C4Context
       title e-Request System Context
-      Enterprise_Boundary(b0, "ขอบเขตของระบบงานบริการข้อมูลข่าวสาร") {
+      Enterprise_Boundary(b0, "ขอบเขตของระบบงานบริการข้อมูลข่าวสาร","ผู้ใช้งาน") {
         Person(customerA, "Customer A", "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
         Person(customerB, "Customer B")
         Person_Ext(customerC, "Customer C", "desc")
@@ -68,7 +68,7 @@ end
         Enterprise_Boundary(b1, "MNRE Web Server") {
 
 
-          System_Boundary(b2, "GDCC Elastic Cloud Server") {
+          System_Boundary(b2, "Elastic Cloud Server", "GDDC") {
             System(SystemA, "e-Tracking User Interface", "รับรหัสคำขอ ตรวจสอบ และรายงานสถานะคำขอ")
             System(SystemB, "e-Tracking Database", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
           }
