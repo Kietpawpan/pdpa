@@ -5,7 +5,7 @@
 ทั้งนี้ ต้องปฏิบัติตามกฎหมายที่เกี่ยวข้อง ดังนี้   
 ```mermaid
 timeline
-    title History of Data Laws in Thailand
+    title Data Laws in Thailand
     2540 : Official Information Act (OIA)
     2562 : Personal Data Protection Act (PDPA)
          : Public Administration and Services via Digital Systems Act
