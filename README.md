@@ -67,7 +67,6 @@ end
 
         Enterprise_Boundary(b1, "MNRE Web Server") {
 
-          SystemDb_Ext(SystemE, "e-Tracking System", "เก็บข้อมูลสถานะคำขอและรหัสคำขอ")
 
           System_Boundary(b2, "BankBoundary2") {
             System(SystemA, "e-Tracking User Interface", "รับรหัสคำขอ ตรวจสอบ และรายงานสถานะคำขอ")
