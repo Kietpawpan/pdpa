@@ -55,11 +55,11 @@ end
 บริการที่สำคัญ
 ```mermaid
     C4Context
-      title System Context diagram for Internet Banking System
+      title System Context diagram for e-Request System
       Enterprise_Boundary(b0, "BankBoundary0") {
-        Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
-        Person(customerB, "Banking Customer B")
-        Person_Ext(customerC, "Banking Customer C", "desc")
+        Person(customerA, "Infomation Customer A", "A customer of the bank, with personal bank accounts.")
+        Person(customerB, "Infomation Customer B")
+        Person_Ext(customerC, "Infomation Customer C", "desc")
 
         Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
 
