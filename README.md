@@ -56,7 +56,7 @@ end
 ```mermaid
     C4Context
       title e-Request System Context
-      Enterprise_Boundary(b0, "BankBoundary0") {
+      Enterprise_Boundary(b0, "ขอบเขตของระบบงานบริการข้อมูลข่าวสาร") {
         Person(customerA, "Infomation Customer A", "ผู้ขอข้อมูลข่าวสาร โดยระบุข้อมูลส่วนบุคคลเพื่อแสดงตน")
         Person(customerB, "Infomation Customer B")
         Person_Ext(customerC, "Infomation Customer C", "desc")
