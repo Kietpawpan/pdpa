@@ -75,8 +75,8 @@ end
 
           System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
       
-          Boundary(b3, "BankBoundary3", "boundary") {
-            SystemQueue(SystemF, "Banking System F Queue", "A system of the bank.")
+          Boundary(b3, "MNRE Office Space", "boundary") {
+            SystemQueue(SystemF, "Personal Computer", "A backup site")
             SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
           }
         }
