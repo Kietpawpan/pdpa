@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<title>PDPA| Lamerd</title>
+<head>
+
+    <base target="_top">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=yes;" />
+
+</head>
+  <body><br/>
+<pre class="mermaid" style="margin-top:10px"> 
+---
+title: การปฏิบัติตามประกาศคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล เรื่อง หลักเกณฑ์และวิธีการในการแจ้งเหตุการละเมิดข้อมูลส่วนบุคคล พ.ศ. 2565
+---
+
+flowchart TD
+ 
+    A[ได้รับแจ้งเหตุละเมิดข้อมูลส่วนบุคคล ตามข้อ 5] --> B{น่าเชื่อถือ?} 
+    B --Yes -->C[ผู้ควบคุมข้อมูล ตรวจสอบข้อเท็จจริง ตามข้อ 5]
+	B --No -->D[เสร็จสิ้นกระบวนการ]
+	C-->E{เสี่ยงกระทบสิทธิเสรีภาพบุคคล? \nตามข้อ 5 อนุ 3}
+	E --ระบุตัวตนได้ นำไปใช้ได้-->F{เสี่ยงสูงตามข้อ 5 อนุ 4 \nประกอบข้อ 12?}
+	E --ระบุตัวตนไม่ได้ นำไปใช้ไม่ได้-->I[ดำเนินมาตรการ ระงับ ตอบสนอง แก้ไข ฟื้นฟู \nป้องกัน ทบทวนมาตรการ ตามข้อ 5 อนุ 5]-->D
+	F--No-->K{ภายใน 72 ชม.?}
+	K--Yes-->J[แจ้งเหตุละเมิดต่อ สคส. ภายใน 72 ชม. \nตามข้อ 5 อนุ 3]-->I
+	K--No-->L{ภายใน 15 วัน?}
+	L--Yes-->M[ขอยกเว้นความผิดจากการแจ้งเหตุละมิดล่าช้า \nตามข้อ 7]-->I
+	L--No-->N[ต้องระวางโทษปรับทางปกครองไม่เกิน 3 ล้านบาท \nตามมาตรา 83 ประกอบมาตรา 37]:::warning
+       classDef warning stroke:#f00
+	F --Yes -->G1[ป้องกัน ระงับ หรือแก้ไขให้การละเมิดสิ้นสุดทันที \nตามข้อ 5 อนุ 2]-->H[แจ้งเจ้าของข้อมูลทราบเหตุ \nและแนวทางเยียวยา ตามข้อ 5 อนุ 4 และข้อ 10]-->K
+	
+</pre>
+	
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+
+</body>
+</html>
