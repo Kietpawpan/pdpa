@@ -211,7 +211,7 @@ sequenceDiagram
 			Regular_Password_Change-->Server_Backup
 			Server_Backup-->[*]}}}
 ```
-[มาตการหลัก 5 ประการ](https://kietpawpan.github.io/pdpa/5Measures.html)
+[มาตการหลัก 5 ประการ](https://kietpawpan.github.io/pdpa/5measures.html)
 # การประเมินความเสี่ยง
 เพื่อควบคุมให้มีความเสี่ยงต่ำหรือไม่มีนัยสำคัญ
 1. ถ้ามีผลกระทบต่อสิทธิเสรีภาพสูง ต้องทำให้ข้อมูลให้ระบุตัวตนไม่ได้ เช่น เข้ารหัส หรือปกปิดบางส่วน
