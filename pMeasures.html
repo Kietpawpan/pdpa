@@ -2,11 +2,11 @@
 <head>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="newspaper.css">
-    <title>Data Protection</title>
+    <title>Data Security</title>
     <meta name="viewport" content="width=device-width">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="crypto-js.min.js"></script>
+   <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script-->
 
 
 </head>
@@ -32,7 +32,7 @@
             <div class="head">
 <span class="headline hl3">
 
-5 มาตรการรักษาความมั่นคงปลอดภัยของข้อมูล
+7 มาตรการรักษาความมั่นคงปลอดภัยของข้อมูล
 </span><p><span class="headline hl4">
 
 โดย มนตรี เกียรติเผ่าพันธ์
@@ -42,7 +42,7 @@
 แปลงข้อมูลเป็นรหัส คนอื่นอ่านไม่ได้ ถ้าไม่มีกุญแจ (decryption key) เพื่อถอดรหัสกลับเป็นข้อมูลต้นฉบับ เช่น วิธี <a href="https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad (AES)</a> 
 
 <img class="media" src="https://www.titanfile.com/wp-content/uploads/2022/12/What-is-Encryption-1-400x225.png.webp"></img><br>
-<b>Fig. 1</b> Encryption<br>
+
 <i>Source</i> : <a style="text-decoration:none;" href="https://www.titanfile.com/blog/5-methods-of-protecting-data/#:~:text=A%20comprehensive%20approach%20to%20data,and%20confidentiality%20of%20sensitive%20information"> Titanfile.com</a>
 </p>
 
@@ -92,14 +92,35 @@ type="text" id="data2" placeholder="Encrypted Data" required></textarea>
 
 </div>
 <div class="collumn">
-แต่ในบางกรณี อาจจำเป็นต้องเข้ารหัสที่ไม่สามารถแปลงกลับเป็นข้อมูลเดิม เช่น การ Hash หมายเลขประจำตัวประชาชน ด้วย SHA3-512 เป็นต้น ทั้งนี้ สามารถใช้<a href="https://esc.mnre.go.th/app/hash/" style="text-decoration:none;">ระบบเข้ารหัสข้อมูลแบบ Hash</a> ของ ศบร.ทส.  
+แต่ในบางกรณี อาจจำเป็นต้องเข้ารหัสที่ไม่สามารถแปลงกลับเป็นข้อมูลเดิม เช่น การ Hash หมายเลขประจำตัวประชาชน ด้วย SHA3-512 (หรือ Keccak) เป็นต้น 
+
+<font color="blue">
+<h3>Hash (Sha3-512):</h3></font>
+
+<textarea id="pwd" oninput="setHeight()" maxlength="1000" style="width:100%"></textarea><br>
+<button onclick="hash()">Hash</button><br><br>
+<b>Hashed Data:</b><br>
+<textarea id="data3" oninput="setHeight()" maxlength="1000" style="width:100%"></textarea>
+
+<script src="sha3.js"></script>
+
+    <script>
+     function hash(){
+let data = document.getElementById("pwd").value;
+let hdata = sha3_512(data);
+document.getElementById("data3").innerHTML = hdata.toString();
+}
+    </script>
+
+
+  
 <h2>2. สำรองข้อมูล (Backup) </h2>
 <p>จัดทำสำเนาข้อมูล 3 ชุด เก็บไว้แยกอุปกรณ์ 2 ชุด อยู่ในที่ปลอดภัย อีกชุดหนึ่งเก็บไว้นอกสถานที่ เช่น บนคลาวด์ที่มีความมั่นคงปลอดภัย เพื่อป้องกันกรณีข้อมูลต้นฉบับสูญหายหรือถูกทำลายจนไม่อยู่ในสภาพพร้อมใช้งาน ทั้งนี้ มีการ backup ย้อนหลัง 7 วัน</p>
 <img class="media" src="cloud.jpg"></img>
 <br>
-<b>Fig. 2</b> Backup<br>
+
 <i>Source</i> : <a style="text-decoration:none;" 
-href="https://pixabay.com/th/illustrations/%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A7%E0%B8%94-%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3-%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%87-%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2-3998880/"> Pixabay.com</a>
+href="https://pixabay.com/th/illustrations/%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A7%E0%B8%94-%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3-%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%87-%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2-3998880/"> Pixabay.com (katielwhite91)</a>
 
 
 <h2>3. ห้ามเข้าถึง (Access Control) </h2>
@@ -107,30 +128,37 @@ href="https://pixabay.com/th/illustrations/%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A7%
 
 <img class="media" src="padlock.png" style="width:100px;"></img>
 <br>
-<b>Fig. 2</b> Access Control<br>
+
 <i>Source</i> : <a style="text-decoration:none;" 
-href="https://pixabay.com/th/vectors/%E0%B8%81%E0%B8%8D%E0%B9%81%E0%B8%88-%E0%B8%A5%E0%B8%AD%E0%B8%84-%E0%B9%82%E0%B8%A5%E0%B8%AB%E0%B8%B0-%E0%B8%9B%E0%B8%94-310540/"> Pixabay.com</a>
-
-<h2>4. เครือข่ายปลอดภัย (Network Security) </h2>
-<p>จัดให้มีระบบรักษาความปลอดภัย เช่น  Firewall, Application Firewall, Antivirus, DDoS Attack และแลกเปลี่ยนข้อมูลผ่านระบบ Secure Socket Layer</p>
-
+href="https://pixabay.com/th/vectors/%E0%B8%81%E0%B8%8D%E0%B9%81%E0%B8%88-%E0%B8%A5%E0%B8%AD%E0%B8%84-%E0%B9%82%E0%B8%A5%E0%B8%AB%E0%B8%B0-%E0%B8%9B%E0%B8%94-310540/"> Pixabay.com<br>(Clker-Free-Vector-Images)</a>
 </div>   
 
 <div class="collumn">
 
+<h2>4. เครือข่ายปลอดภัย (Network Security) </h2>
+<p>จัดให้มีระบบรักษาความปลอดภัย เช่น  Firewall, Application Firewall, Antivirus, DDoS Attack และแลกเปลี่ยนข้อมูลผ่านระบบ Secure Socket Layer</p>
+<br>
 
+<h2>5. ปรับปรุงซอฟแวร์และระบบปฏิบัติการ</h5>
+<p>ปรับปรุง (update) ซอฟแวร์และระบบปฏิบัติการของเครื่องคอมพิวเตอร์ให้ทันสมัย เพื่อให้มีเทคโนโลยีการรักษาความมั่นคงปลอดภัยไซเบอร์ที่ทันสมัยและปลอดภัยยิ่งขึ้น
+</p>
+<img class="media" src="update.jpg"></img>
+<br>
+<i>Source</i> : <a style="text-decoration:none;" 
+href="https://pixabay.com/th/illustrations/%E0%B8%AD%E0%B8%9B%E0%B9%80%E0%B8%94%E0%B8%95-%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B8%95%E0%B8%B2%E0%B8%87-%E0%B9%80%E0%B8%9B%E0%B8%94-%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B9%80%E0%B8%87%E0%B8%99-3357083/"> Pixabay.com (Gerd Altmann)</a>
+<br><br>
 
-
-<h2>5. เชิงกายภาพ </h2>
+<h2>6. เชิงกายภาพ </h2>
 <p>รักษาความมั่นคงปลอดภัยของอุปกรณ์เก็บข้อมูลและสถานที่จัดเก็บอุปกรณ์ดังกล่าว ไม่ให้ถูกเข้าถึงโดยผู้ไม่มีหน้าที่เกี่ยวข้อง เช่น การเก็บข้อมูลในตู้เหล็กที่มีกุญแจล็อคและผู้ควบคุมกุญแจ สมุดบันทึกการเข้าถึงข้อมูล</p>
 <img class="media" src="technology.jpg"></img>
 <br>
-<b>Fig. 2</b> Physical Security<br>
 <i>Source</i> : <a style="text-decoration:none;" 
-href="https://pixabay.com/th/illustrations/%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2-%E0%B8%94%E0%B8%88%E0%B8%97%E0%B8%A5-%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A3%E0%B9%80%E0%B8%99%E0%B8%95-8760347/"> Pixabay.com</a>
+href="https://pixabay.com/th/illustrations/%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2-%E0%B8%94%E0%B8%88%E0%B8%97%E0%B8%A5-%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A3%E0%B9%80%E0%B8%99%E0%B8%95-8760347/"> Pixabay.com (TungArt7)</a>
 <br><br>
+</div>
+<div class="collumn">
 
-<h2>6. เชิงบริหาร </h2>
+<h2>7. เชิงบริหาร </h2>
 <p>
 กรณีข้อมูลส่วนบุคคล ผู้ควบคุมข้อมูลส่วนบุคคล จะต้องดำเนินการให้เป็นไปตาม<a href="https://www.ratchakitcha.soc.go.th/DATA/PDF/2565/E/140/T_0028.PDF" style="text-decoration:none;">ประกาศคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล เรื่อง  มาตรการรักษาความมั่นคงปลอดภัยของผู้ควบคุมข้อมูลส่วนบุคคล  พ.ศ.  2565</a> รวมถึงหน้าที่อื่น ๆ ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 ได้แก่
 <ul>
@@ -145,10 +173,8 @@ href="https://pixabay.com/th/illustrations/%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%
 <li>จัดให้มีระบบตรวจสอบ เพื่อลบหรือทำลายข้อมูลส่วนบุคคลเมื่อพ้นกำหนดระยะเวลาการเก็บรักษา
 <li><a href="https://kietpawpan.github.io/pdpa/lamerd.html" style="text-decoration:none;">แจ้งเหตุละเมิดข้อมูลส่วนบุคคล</a>ตามหลักเกณฑ์และวิธีการที่คณะกรรมการคุ้มครองข้อมูลส่วนบุคคลกำหนด
 	</ol>
-</div>
-<div class="collumn">
-<li>มาตรา 39 บันทึกรายการกิจกรรมการประมวลผลข้อมูลส่วนบุคล (Record of Processing Activities) 
 
+<li>มาตรา 39 บันทึกรายการกิจกรรมการประมวลผลข้อมูลส่วนบุคล (Record of Processing Activities) 
 </ul>
 </p>
 
@@ -166,8 +192,13 @@ Copyright &copy; 2023 by TitanFile, Inc.  (https://www.titanfile.com/)
 
 <br><br>
 <b>AES Encryption</b><br>
-Modified from user120242
+Modified from user120242/JSFiddle
 (https://jsfiddle.net/rLt7haxc/6/)
+
+<br><br>
+<b>SHA3-512 Algorithm</b><br>
+Copyright &copy; 2024 by Chen, Yi-Cyuan
+(https://github.com/emn178/js-sha3)
 
 <br><br>
 <b>Images</b><br>
