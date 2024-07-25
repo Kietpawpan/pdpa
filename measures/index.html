@@ -17,13 +17,13 @@
 
 Knowledge Management</span><br><span>
 
-การจัดการองค์ความรู้ ศบร.ทส.
+การจัดการองค์ความรู้
 
 </span></div>
         <header>Data Security</header>
     </div>
 
-    <div class="subhead">MNRE-SLC - Thursday, July 25th, 2024</div>
+    <div class="subhead">Phaya thai, BK - Thursday July 25th, 2024</div>
 </div>
 <div class="content">
     <div class="collumns">
@@ -37,6 +37,18 @@ Knowledge Management</span><br><span>
 โดย มนตรี เกียรติเผ่าพันธ์
 
 </span></p></div>
+<p><b>การรักษาความมั่นคงปลอดภัยของข้อมูล</b> คือ การธำรงไว้ซึ่งความลับ  (confidentiality) ความถูกต้องครบถ้วน  (integrity) และสภาพพร้อมใช้งาน  (availability)  ของข้อมูล ทั้งนี้ เพื่อป้องกันการ<font color="red">สูญหาย  เข้าถึง  ใช้  เปลี่ยนแปลง  แก้ไข  หรือเปิดเผยข้อมูลโดยปราศจากอำนาจหรือโดยมิชอบ</font> โดยเฉพาะข้อมูลดิจิทัลที่รั่วไหลได้ง่าย จะต้องมีมาตรการที่เหมาะสม อาทิ </p>
+<ul>
+<li>การเข้ารหัส 
+<li>การสำรอง  
+<li>การจำกัดการเข้าถึง  
+<li>การรักษาเครือข่ายสารสนเทศ  
+<li>การติดตั้งซอฟแวร์รุ่นใหม่  
+<li>การรักษาความปลอดภัยทางกายภาพ และ
+<li>การใช้มาตรการเชิงบริหาร 
+</ul>
+
+
 <h2>1. เข้ารหัส (Encryption)</h2>
 แปลงข้อมูลเป็นรหัส คนอื่นอ่านไม่ได้ ถ้าไม่มีกุญแจ (decryption key) เพื่อถอดรหัสกลับเป็นข้อมูลต้นฉบับ เช่น วิธี <a href="https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad (AES)</a> 
 
@@ -136,7 +148,7 @@ href="https://pixabay.com/th/illustrations/%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A7%
 
 </figure>
 
-<h2>3. ห้ามเข้าถึง (Access Control) </h2>
+<h2>3. จำกัดการเข้าถึง (Access Control) </h2>
 <p>กรณีข้อมูลกระดาษ กำหนดให้ข้อมูลส่วนบุคคลเป็นข้อมูลข่าวสารลับ ตามระเบียบว่าด้วยการรักษาความลับของทางราชการ พ.ศ. 2544 และที่แก้ไขเพิ่มเติม ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้อง เท่าที่จำเป็นเท่านั้น กรณีข้อมูลดิจิทัล ให้มีระบบ login ด้วย username และ password ที่จำง่าย พิมพ์ง่าย เดายาก (Entropy) เจาะยาก และห้ามเปิดเผยหรืออนุญาตให้ผู้อื่นใช้โดยเด็ดขาด รวมถึงมีระบบ multi-factor authentication เช่น ให้กรอกรหัส OTP ที่ระบบส่งให้ทางอีเมลส่วนตัว</p>
 
 <figure class="figure">				
@@ -154,16 +166,16 @@ href="https://pixabay.com/th/vectors/%E0%B8%81%E0%B8%8D%E0%B9%81%E0%B8%88-%E0%B8
 
 <div class="collumn">
 
-<h2>4. เครือข่ายปลอดภัย (Network Security) </h2>
+<h2>4. รักษาเครือข่ายให้มั่นคงปลอดภัย (Network Security) </h2>
 <p>จัดให้มีระบบรักษาความปลอดภัย เช่น  Firewall, Application Firewall, Antivirus, DDoS Attack และแลกเปลี่ยนข้อมูลผ่านระบบ Secure Socket Layer (SSL Certificate) โดยหน่วยงานในสังกัดสำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อมที่มีโดเมนย่อย  *.mnre.go.th สามารถขอรับไฟล์ SSL Certificate ของหน่วยงานได้ที่ศูนย์เทคโนโลยีดิจิทัลและอากาศยาน และติดตั้งบนเครื่อง Server ของระบบที่ตนดูแล ถ้าใช้ระบบ Apache HTTP สามารถดูวิธีติดตั้งที่ <a href="https://github.com/Kietpawpan/Apache" style="text-decoration:none;">https://github.com/Kietpawpan/Apache</a> สำหรับการรักษาความมั่นคงปลอดภัยของเครือข่าย ควรศึกษาเรื่อง <a style="text-decoration:none;" href="https://www.w3schools.com/cybersecurity/index.php">Cyber Security</a> และ<a style="text-decoration:none;" href="https://www.ratchakitcha.soc.go.th/DATA/PDF/2564/E/303/T_0003.PDF
-">ประกาศคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ เรื่อง  ลักษณะภัยคุกคามทางไซเบอร์  มาตรการป้องกัน  รับมือ  ประเมิน  ปราบปราม และระงับภัยคุกคามทางไซเบอร์แต่ละระดับ  พ.ศ. 2564</a>
-
-</p>
-
-<h2>5. ปรับปรุงซอฟแวร์และระบบปฏิบัติการ</h5>
-<p>หมั่นตรวจสอบและปรับปรุงเวอร์ชัน (update) ของซอฟแวร์และระบบปฏิบัติการของเครื่องคอมพิวเตอร์แม่ข่ายให้ทันสมัย เพื่อให้มีเทคโนโลยีรักษาความมั่นคงปลอดภัยไซเบอร์ที่มีปลอดภัยยิ่งขึ้น เช่น โปรแกรม PHP / Hash algorithm / Encryption Algorithm / Windows / iOS / Android / Apache อนึ่ง สำหรับการพัฒนาแอพพลิเคชัน ควรปฏิบัติตามาตรฐานที่เกี่ยวข้อง เช่น <a style="text-decoration:none;" 
+">ประกาศคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ เรื่อง  ลักษณะภัยคุกคามทางไซเบอร์  มาตรการป้องกัน  รับมือ  ประเมิน  ปราบปราม และระงับภัยคุกคามทางไซเบอร์แต่ละระดับ  พ.ศ. 2564 </a> อนึ่ง สำหรับการพัฒนาแอพพลิเคชันของหน่วยงาน ก็ควรปฏิบัติตามมาตรฐานที่เกี่ยวข้อง เช่น <a style="text-decoration:none;" 
 href="https://www.dga.or.th/policy-standard/standard/dga-007/dga-010/">มาตรฐานแอปพลิเคชันภาครัฐสำหรับ อุปกรณ์เคลื่อนที่</a> เป็นต้น
+
+
 </p>
+
+<h2>5. ติดตั้งซอฟแวร์รุ่นใหม่</h5>
+<p>หมั่นตรวจสอบและติดตั้งซอฟแวร์ของเครื่องคอมพิวเตอร์แม่ข่ายและเครื่องคอมพิวเตอร์ที่ใช้งาน ให้เป็นเวอร์ชันใหม่ (update) ซึ่งมีเทคโนโลยีรักษาความมั่นคงปลอดภัยไซเบอร์ที่ดียิ่งขึ้น เช่น โปรแกรม PHP / Hash algorithm / Encryption Algorithm / Windows / iOS / Android / Apache </p>
 
 <figure class="figure">				
 
@@ -237,7 +249,7 @@ Copyright &copy; 2024 by Silke V (https://codepen.io/silkine/pen/QWBxVX)
 
 <br><br>
 <b>Top 5 Methods of Protecting Data</b><BR>
-Copyright &copy; 2023 by TitanFile, Inc.  (https://www.titanfile.com/)
+Copyright &copy; 2023 by TitanFile, Inc.  (<a href="https://www.titanfile.com/blog/5-methods-of-protecting-data/" style="text-decoration:none;">https://www.titanfile.com/</a>)
 
 <br><br>
 <b>AES Encryption</b><br>
