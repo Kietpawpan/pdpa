@@ -50,7 +50,9 @@ Knowledge Management</span><br><span>
 
 
 <h2>1. เข้ารหัส (Encryption)</h2>
-แปลงข้อมูลเป็นรหัส คนอื่นอ่านไม่ได้ ถ้าไม่มีกุญแจ (decryption key) เพื่อถอดรหัสกลับเป็นข้อมูลต้นฉบับ เช่น วิธี <a href="https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad (AES)</a> 
+แปลงข้อมูลเป็นรหัส ที่อ่านไม่ได้ และต้องใช้กุญแจส่วนตัว (decryption key หรือ private key) เพื่อถอดรหัสนั้น กลับเป็นข้อมูลต้นฉบับ ทั้งนี้ รัฐบาลกลางสหรัฐอเมริกาใช้วิธี <a href="fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad (AES)</a> ของสถาบันมาตรฐานและเทคโนโลยีแห่งชาติ (U.S. National Institute of Standards and Technology: NIST) ซึ่งได้มาตรฐาน ISO/IEC 18033-3 (มาตรฐานเทคโนโลยีสารสนเทศ - เทคนิคการรักษาความมั่นคงปลอดภัย : การเข้ารหัสแบบ block ciphers)
+
+<!--Source: https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf"-->
 
 <figure class="figure">
 								
@@ -108,12 +110,14 @@ type="text" id="data2" placeholder="Encrypted Data" required></textarea>
 
 </div>
 <div class="collumn">
-แต่ในบางกรณี อาจจำเป็นต้องเข้ารหัสที่ไม่สามารถแปลงกลับเป็นข้อมูลเดิม เช่น การ Hash หมายเลขประจำตัวประชาชน ด้วย SHA3-512 (หรือ Keccak) : 
+แต่บางครั้ง อาจจำเป็นต้องเข้ารหัสที่ไม่สามารถแปลงกลับเป็นข้อมูลเดิม เช่น การ Hash หมายเลขประจำตัวประชาชน ด้วย SHA3-512 (หรือ Keccak) ซึ่งเป็นมาตรฐานการเข้ารหัสแบบ <a style="text-decoration:none;" href="NIST.FIPS.202.pdf">Secure Hash Algorithm</a> รุ่นล่าสุด ออกโดย NIST เมื่อปี พ.ศ. 2558: 
+
+<!--Source: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf-->
 
 <font color="blue">
 <h3>Hash (Sha3-512):</h3></font>
 
-<textarea id="data5" oninput="setHeight()" style="width:100%"></textarea><br>
+<textarea id="data5" oninput="setHeight()" style="width:100%" placeholder="Data to hash"></textarea><br>
 <button onclick="hash()" style="margin-top:5px;">Hash</button><br><br>
 
 <b>Hashed Data:</b><br>
@@ -258,6 +262,17 @@ Modified from user120242/JSFiddle/cdnjs
 <b>SHA3-512 Algorithm</b><br>
 Copyright &copy; 2024 by Chen, Yi-Cyuan
 (https://github.com/emn178/js-sha3)
+
+<br><br>
+<b>SHA-3 Standard Document</b><br>
+Copyright &copy; 2024 by U.S. National Institute of Standards and Technology
+(https://doi.org/10.6028/NIST.FIPS.202)
+
+<br><br>
+<b>AES Standard Document</b><br>
+Copyright &copy; 2024 by U.S. National Institute of Standards and Technology
+(https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf)
+
 
 <br><br>
 <b>Images</b><br>
