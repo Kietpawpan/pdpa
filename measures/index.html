@@ -23,7 +23,7 @@ Knowledge Management</span><br><span>
         <header>Data Security</header>
     </div>
 
-    <div class="subhead">Phaya thai, BK - Thursday July 25th, 2024</div>
+    <div class="subhead">Bangkok - Friday July 26th, 2024</div>
 </div>
 <div class="content">
     <div class="collumns">
@@ -126,12 +126,22 @@ type="text" id="data2" placeholder="Encrypted Data" required></textarea>
 <p align="left"><i class='fa fa-clone' onclick="copy2()"></i></p>
 <span class="popuptext" id="r3" style="width:150px;">Copied!</span>
 <button onclick="clearHash()">Clear</button>
-
 </div>
 
+<p>นอกจากนี้ การตั้งชื่อไฟล์ข้อมูลที่อาจเขาถึงได้ผ่านเว็บบราวเซอร์ ไม่ควรใช้รูปแบบตัวเลขที่เรียงลำดับ (magic numbers) เพราะจะถูกเข้าถึงโดยการเดาชื่อไฟล์ได้ง่าย แต่ควรใช้รูปแบบที่คาดเดายาก เช่น GUID/UUID คือ xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx โดยที่ M คือ version ของ GUID/UUID (1 - 5) และ N คือ variant ของ GUID/UUID (8, 9, a และ b) 
+</p>
+<font color="blue">
+<b>GUID/UUID Generator:</b><br></font>
+<button onclick="guid()" style="margin-top:5px;">Run</button><br><br>
 
-
-  
+<b>GUID/UUID:</b><br>
+<textarea id="data6" oninput="setHeight()" style="width:100%"></textarea><br>
+<div class="popup">
+<p align="left"><i class='fa fa-clone' onclick="copyGuid()"></i></p>
+<span class="popuptext" id="r5" style="width:150px;">Copied!</span>
+<button onclick="clearGuid()">Clear</button>
+</div>
+ 
 <h2>2. สำรองข้อมูล (Backup) </h2>
 <p>จัดทำสำเนาข้อมูล 3 ชุด เก็บไว้แยกอุปกรณ์ 2 ชุด อยู่ในที่ปลอดภัย อีกชุดหนึ่งเก็บไว้นอกสถานที่ เช่น บนคลาวด์ที่มีความมั่นคงปลอดภัย เพื่อป้องกันกรณีข้อมูลต้นฉบับสูญหายหรือถูกทำลายจนไม่อยู่ในสภาพพร้อมใช้งาน เช่น การใช้บริการระบบคลาวด์กลางภาครัฐหรือ <a href="https://gdcc.onde.go.th" style="text-decoration:none;">Government Data Center and Cloud Service: GDCC</a> ของกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม ซึ่งมีการ backup ย้อนหลัง 7 วัน อนึ่ง หากเป็นข้อมูลที่เปิดเผยได้ อาจเก็บไว้บนคลาวด์เอกชน เช่น <a href="https://www.github.com" style="text-decoration:none;">Github</a> และ <a href="https://drive.google.com" style="text-decoration:none;"> Google Dive</a> เป็นต้น</p>
 
@@ -272,6 +282,13 @@ Released in 2015 by U.S. National Institute of Standards and Technology
 <b>AES Standard Document</b><br>
 Released in 2001 by U.S. National Institute of Standards and Technology
 (https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf)
+
+<br><br>
+<b>GUID/UUID JavaScript</b><br>
+GeeksforGeeks.org
+(https://www.geeksforgeeks.org/how-to-create-a-guid-uuid-in-javascript/)
+
+
 
 
 <br><br>
