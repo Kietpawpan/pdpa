@@ -1,5 +1,5 @@
 /* Copyright (c) 2024 by Monte Kietpawpan
- * measures.js | v1.0.0 July 25, 2024 
+ * measures.js | v1.0.1 July 26, 2024 
  * MIT License */
 
 function enc(){
@@ -65,6 +65,18 @@ function copy3(){
   var popup = document.getElementById("r4");
   popup.classList.toggle("show");
 }
+
+function copyGuid(){
+  const element = document.querySelector("#data6");
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  element.setSelectionRange(0, 0);
+  /* window.alert("Copied!"); */
+  var popup = document.getElementById("r5");
+  popup.classList.toggle("show");
+}
+
 function clearAll(){
 document.getElementById('key1').value ="";
 document.getElementById('key2').value ="";
@@ -86,3 +98,25 @@ document.getElementById('data4').value ="";
 var popup = document.getElementById("r3");
 popup.classList.toggle("hide");
 }
+
+function clearGuid(){
+document.getElementById('data6').value ="";
+var popup = document.getElementById("r5");
+popup.classList.toggle("hide");
+}
+
+
+
+function guid(){
+	function uuidv4() {
+    	return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+    	.replace(/[xy]/g, function (c) {
+        const r = Math.random() * 16 | 0, 
+        v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    	});
+	}
+	const random_uuid = uuidv4();
+	document.getElementById('data6').innerHTML = random_uuid;
+}
+
