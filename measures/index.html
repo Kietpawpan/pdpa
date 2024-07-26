@@ -128,11 +128,11 @@ type="text" id="data2" placeholder="Encrypted Data" required></textarea>
 <button onclick="clearHash()">Clear</button>
 </div>
 
-<p>นอกจากนี้ การตั้งชื่อไฟล์ข้อมูลที่อาจเขาถึงได้ผ่านเว็บบราวเซอร์ ไม่ควรใช้รูปแบบตัวเลขที่เรียงลำดับ (magic numbers) เพราะจะถูกเข้าถึงโดยการเดาชื่อไฟล์ได้ง่าย แต่ควรใช้รูปแบบที่คาดเดายาก เช่น GUID/UUID คือ xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx โดยที่ M คือ version ของ GUID/UUID (1 - 5) และ N คือ variant ของ GUID/UUID (8, 9, a และ b) 
+<p style="margin-top:15px;">นอกจากนี้ การตั้งชื่อไฟล์ข้อมูลที่คนอื่นอาจเขาถึงได้ผ่านเว็บบราวเซอร์โดยไม่มีอำนาจหรือโดยมิชอบ ไม่ควรใช้รูปแบบตัวเลขที่เรียงลำดับ (magic numbers) เพราะจะถูกเข้าถึงโดยการเดาชื่อไฟล์ได้ง่าย แต่ควรใช้รูปแบบที่คาดเดายาก เช่น GUID/UUID ซึ่งมีรูปแบบเป็นตัวเลขผสมกับตัวอักษรแบบสุ่ม คือ xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx โดยที่ M คือ version ของ GUID/UUID (1 - 5) และ N คือ variant ของ GUID/UUID (8, 9, a และ b) 
 </p>
 <font color="blue">
 <b>GUID/UUID Generator:</b><br></font>
-<button onclick="guid()" style="margin-top:5px;">Run</button><br><br>
+<button onclick="guid()" style="margin-top:5px;">Create</button><br><br>
 
 <b>GUID/UUID:</b><br>
 <textarea id="data6" oninput="setHeight()" style="width:100%"></textarea><br>
