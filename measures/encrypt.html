@@ -37,14 +37,15 @@ Digital KM</span><br><span>
 มนตรี เกียรติเผ่าพันธ์
 
 </span></p></div>
-โปรแกรมนี้ ช่วยแปลงข้อมูลเป็นรหัสที่ไม่มีใครรู้ความหมาย (encryption) โดยต้องใช้กุญแจส่วนตัว (private key) ในการเข้ารหัส และต้องใช้กุญแจเดียวกัน เพื่อไขรหัสกลับไปเป็นข้อมูลเดิม (decryption) ทั้งนี้ เพื่อการรักษาความลับของข้อมูล โดยเฉพาะข้อมูลอ่อนไหวที่ถูกเก็บรวบรวม ใช้ หรือเปิดเผยผ่านระบบดิจิทัล</p>
+Encrypt คือ โปรแกรมแปลงข้อมูลเป็นรหัสที่ไม่มีใครรู้ความหมาย (encryption) โดยใช้กุญแจส่วนตัว (private key) ในการเข้ารหัส และต้องใช้กุญแจเดียวกัน เพื่อไขรหัสกลับไปเป็นข้อมูลเดิม (decryption) ทั้งนี้ เพื่อธำรงไว้ซึ่งความลับของข้อมูล โดยเฉพาะข้อมูลอ่อนไหวที่ถูกเก็บรวบรวม ใช้ หรือเปิดเผยผ่านระบบดิจิทัล</p>
 <p>
-โดยเป็นการเข้ารหัสแบบ block ciphers ตามมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้ <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> ในปี พ.ศ. 2548 ทั้งนี้ รหัสจะมีความยาว 128 บิท 192 บิท หรือ 256 บิท อย่างใดอย่างหนึ่ง ขึ้นกับความยาวของ private key ที่ผู้เข้ารหัสกำหนดในขั้นตอนการเข้ารหัส รายละเอียดตาม <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github crypto-js repository</a></p>
+การเข้ารหัส เป็นแบบ block ciphers ตามมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้รับการรับรองมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> ในปี พ.ศ. 2548 อนึ่ง รหัสจะเจาะได้ยากมากขึ้น ถ้ามีความยาวมากขึ้น (จำนวนบิทมากขึ้น) โดยรหัสที่ได้จากโปรแกรมนี้ จะมีความจำนวน 128 บิท 192 บิท หรือ 256 บิท อย่างใดอย่างหนึ่ง ขึ้นกับความยาวของ private key ที่ผู้เข้ารหัสกำหนดในขั้นตอนการเข้ารหัส รายละเอียดตาม <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github crypto-js repository</a></p>
 
 <p>
 ปัจจุบัน (พ.ศ. 2567) หน่วยงานความมั่นคงไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
 ">Cybersecurity and Infrastructure Security Ageny</a>) ยังคงแนะนำให้หน่วยงานในสหรัฐอเมริกา ใช้ AES ในการเข้ารหัสข้อมูลแบบ encryption 
 </p>
+
 
 <!--Source: 
 https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf
@@ -111,6 +112,23 @@ type="text" id="data2" placeholder="Encrypted Data" required></textarea>
 
 <div id="3"></div>
 <button onclick="clearAll()">Clear</button>
+<br><br>
+
+<p>
+<figcaption class="figcaption">
+
+<b>หมายเหตุ :</b> <br>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript เป็น <a style="text-decoration:none;" href="https://raw.githubusercontent.com/Kietpawpan/pdpa/main/measures/encrypt.html">open source</a> ไม่มีการเก็บข้อมูลของท่านแต่อย่างใด <font color="red"> หากท่านลืม private key และทำลายข้อมูลต้นฉบับแล้ว จะไม่มีใครกู้ข้อมูลต้นฉบับนั้นได้ เว้นแต่จะคาดเดา private key ของท่านได้อย่างถูกต้อง</font> 
+</figcaption>
+</p>
+
+<!--
+<figure class="figure">						
+<img class="media" src="global-security-1734189_1280.jpg"></img>
+<figcaption class="figcaption">
+<i>ภาพโดย </i> : <a style="text-decoration:none;" href="https://pixabay.com/th/illustrations/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%A2%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81-%E0%B9%81%E0%B8%AE%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3-1734189/">Pete Linforth จาก Pixabay</a>
+</figcaption>
+</figure>
+-->
 </div>
 
 <div class="collumn">
