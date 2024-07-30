@@ -1,5 +1,5 @@
 /* Copyright (c) 2024 by Monte Kietpawpan
- * measures.js | v1.0.1 July 26, 2024 
+ * measures.js | v1.0.2 July 30, 2024 
  * MIT License */
 
 function enc(){
@@ -42,7 +42,9 @@ function copy1(){
   /* window.alert("Copied!"); */
   var popup = document.getElementById("r2");
   popup.classList.toggle("show");
-}
+  setTimeout(function() {
+  popup.classList.toggle("hide");}, 1200);
+  }
 	
 function copy2(){
   const element = document.querySelector("#data4");
@@ -53,6 +55,9 @@ function copy2(){
   /* window.alert("Copied!"); */
   var popup = document.getElementById("r3");
   popup.classList.toggle("show");
+ setTimeout(function() {
+             popup.classList.toggle("hide");}, 1200);
+
 }
 
 function copy3(){
@@ -64,6 +69,9 @@ function copy3(){
   /* window.alert("Copied!"); */
   var popup = document.getElementById("r4");
   popup.classList.toggle("show");
+  setTimeout(function() {
+  popup.classList.toggle("hide");}, 1200);
+
 }
 
 function copyGuid(){
@@ -75,6 +83,9 @@ function copyGuid(){
   /* window.alert("Copied!"); */
   var popup = document.getElementById("r5");
   popup.classList.toggle("show");
+ setTimeout(function() {
+             popup.classList.toggle("hide");}, 1200);
+
 }
 
 function clearAll(){
@@ -86,23 +97,15 @@ document.getElementById('t1').value ="";
 document.getElementById('data2').value ="";
 document.getElementById('data3').value ="";
 document.getElementById('data4').value ="";
-var popup = document.getElementById("r2");
-var popup2 = document.getElementById("r4");
-popup.classList.toggle("hide");
-popup2.classList.toggle("hide");
 }
 
 function clearHash(){
 document.getElementById('data5').value ="";
 document.getElementById('data4').value ="";
-var popup = document.getElementById("r3");
-popup.classList.toggle("hide");
 }
 
 function clearGuid(){
 document.getElementById('data6').value ="";
-var popup = document.getElementById("r5");
-popup.classList.toggle("hide");
 }
 
 
