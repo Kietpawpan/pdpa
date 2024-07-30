@@ -20,6 +20,7 @@
 
 </head>
 
+
 <body>
 <div class="head">
     <div class="headerobjectswrapper">
@@ -30,6 +31,7 @@ Digital KM</span><br><span>
 การจัดการความรู้ด้านดิจิทัล
 
 </span></div>
+
         <header>Encrypt</header>
     </div>
 
@@ -47,9 +49,62 @@ Digital KM</span><br><span>
 มนตรี เกียรติเผ่าพันธ์
 
 </span></p></div>
-Encrypt คือ โปรแกรมแปลงข้อมูลเป็นรหัสที่ไม่มีใครรู้ความหมาย (encryption) โดยใช้กุญแจส่วนตัว (private key) ในการเข้ารหัส และต้องใช้กุญแจเดียวกัน เพื่อไขรหัสกลับไปเป็นข้อมูลเดิม (decryption) ทั้งนี้ เพื่อธำรงไว้ซึ่งความลับของข้อมูล โดยเฉพาะข้อมูลอ่อนไหวที่ถูกเก็บรวบรวม ใช้ หรือเปิดเผยผ่านระบบดิจิทัล</p>
+Encrypt เป็น web application สำหรับแปลงข้อมูลเป็นรหัสที่ไม่มีใครรู้ความหมาย (encryption) โดยใช้กุญแจส่วนตัว (private key) ในการเข้ารหัส และต้องใช้กุญแจเดียวกัน เพื่อไขรหัสกลับไปเป็นข้อมูลเดิม (decryption) ทั้งนี้ เพื่อธำรงไว้ซึ่งความลับของข้อมูล โดยเฉพาะข้อมูลอ่อนไหวที่ถูกเก็บรวบรวม ใช้ หรือเปิดเผยผ่านระบบดิจิทัล</p>
+</div>
+
+<div class="collumn">
+<font color="blue">
+<h3>Encryption (AES):</h3></font>
+<textarea 
+				oninput="setHeight1()"
+				style="width:100%"
+type="text" id="data1" placeholder="Sensitive Data" required></textarea>
+
+<br>
+<input type="text" id="key1" placeholder="Private Key" required style="margin-top:5px;width:100%"><br>
+<button onclick="enc()" style="margin-top:5px;">Encrypt</button><br><br>
+
+<b>Encrypted data:</b><br>
+<textarea id="t1" 		oninput="setHeight()"
+				style="width:100%"
+
+></textarea><br>
+<div class="popup">
+<p align="right"><i class='fa fa-clone' onclick="copy1()"></i></p>
+<span class="popuptext" id="r2" style="width:150px;">Copied!</span>
+</div>
+
+<font color="blue"><h3>Decryption:</h3></font>
+<textarea 
+				oninput="setHeight2()"
+				style="width:100%"
+type="text" id="data2" placeholder="Encrypted Data" required></textarea>
+
+<input type="text" id="key2" placeholder="Private Key" required style="margin-top:5px;width:100%"><br>
+<button onclick="dec()" style="margin-top:5px;">Decrypt</button><br><br>
+
+
+
+<b>Decrypted data:</b><br>
+<textarea id="data3"		oninput="setHeight3()"
+				style="width:100%">
+</textarea><br>
+<div class="popup">
+<p align="right"><i class='fa fa-clone' onclick="copy3()"></i></p>
+<span class="popuptext" id="r4" style="width:150px;">Copied!</span>
+</div>
+
+<div id="3"></div>
+<button onclick="clearAll()">Clear</button>
+<br><br>
+</div>
+
+<div class="collumn">
+
 <p>
-การเข้ารหัส เป็นแบบ block ciphers ตามมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้รับการรับรองมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> ในปี พ.ศ. 2548 อนึ่ง รหัสจะเจาะได้ยากมากขึ้น ถ้ามีความยาวมากขึ้น (จำนวนบิทมากขึ้น) โดยรหัสที่ได้จากโปรแกรมนี้ จะมีความจำนวน 128 บิท 192 บิท หรือ 256 บิท อย่างใดอย่างหนึ่ง ขึ้นกับความยาวของ private key ที่ผู้เข้ารหัสกำหนดในขั้นตอนการเข้ารหัส รายละเอียดตาม <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github crypto-js repository</a></p>
+<h3>ข้อมูลเชิงเทคนิค</h3>
+<p>
+เป็นการเข้ารหัสแบบ block ciphers ตามมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้รับการรับรองมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> ในปี พ.ศ. 2548 ทั้งนี้ รหัสจะเจาะได้ยากขึ้น ถ้ามีความยาวมากขึ้น (จำนวนบิทมากขึ้น) โดยรหัสที่ได้จากโปรแกรมนี้ จะมีความจำนวน 128 บิท 192 บิท หรือ 256 บิท อย่างใดอย่างหนึ่ง ขึ้นกับความยาวของ private key ที่กำหนดตอนเข้ารหัส รายละเอียดตาม <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github crypto-js repository</a></p>
 
 <p>
 ปัจจุบัน (พ.ศ. 2567) หน่วยงานความมั่นคงไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
@@ -74,61 +129,9 @@ https://www.cisa.gov/sites/default/files/2024-05/23_0918_fpic_AES-Transition-Whi
 
 
 </p>
-</div>
 
-<div class="collumn">
-<font color="blue">
-<h3>Encryption (AES):</h3></font>
-<textarea 
-				oninput="setHeight()"
-				style="width:100%"
-type="text" id="data1" placeholder="Sensitive Data" required></textarea>
+อนึ่ง โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript เป็น <a style="text-decoration:none;" href="https://raw.githubusercontent.com/Kietpawpan/pdpa/main/measures/encrypt.html">open source</a> ไม่มีการเก็บข้อมูลของท่านแต่อย่างใด <font color="red"> หากท่านลืม private key และทำลายข้อมูลต้นฉบับแล้ว จะไม่มีใครกู้ข้อมูลต้นฉบับนั้นได้ เว้นแต่จะคาดเดา private key ของท่านได้อย่างถูกต้อง</font> 
 
-<br>
-<input type="text" id="key1" placeholder="Private Key" required style="margin-top:5px;width:100%"><br>
-<button onclick="enc()" style="margin-top:5px;">Encrypt</button><br><br>
-
-<b>Encrypted data:</b><br>
-<textarea id="t1" 		oninput="setHeight()"
-				style="width:100%"
-
-></textarea><br>
-<div class="popup">
-<p align="right"><i class='fa fa-clone' onclick="copy1()"></i></p>
-<span class="popuptext" id="r2" style="width:150px;">Copied!</span>
-</div>
-</div>
-
-<div class="collumn">
-<font color="blue"><h3>Decryption:</h3></font>
-<textarea 
-				oninput="setHeight()"
-				style="width:100%"
-type="text" id="data2" placeholder="Encrypted Data" required></textarea>
-
-<input type="text" id="key2" placeholder="Private Key" required style="margin-top:5px;width:100%"><br>
-<button onclick="dec()" style="margin-top:5px;">Decrypt</button><br><br>
-
-
-
-<b>Decrypted data:</b><br>
-<textarea id="data3"		oninput="setHeight()"
-				style="width:100%">
-</textarea><br>
-<div class="popup">
-<p align="right"><i class='fa fa-clone' onclick="copy3()"></i></p>
-<span class="popuptext" id="r4" style="width:150px;">Copied!</span>
-</div>
-
-<div id="3"></div>
-<button onclick="clearAll()">Clear</button>
-<br><br>
-
-<p>
-<figcaption class="figcaption">
-
-<b>หมายเหตุ :</b> <br>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript เป็น <a style="text-decoration:none;" href="https://raw.githubusercontent.com/Kietpawpan/pdpa/main/measures/encrypt.html">open source</a> ไม่มีการเก็บข้อมูลของท่านแต่อย่างใด <font color="red"> หากท่านลืม private key และทำลายข้อมูลต้นฉบับแล้ว จะไม่มีใครกู้ข้อมูลต้นฉบับนั้นได้ เว้นแต่จะคาดเดา private key ของท่านได้อย่างถูกต้อง</font> 
-</figcaption>
 </p>
 
 <!--
