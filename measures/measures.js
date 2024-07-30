@@ -2,13 +2,14 @@
  * measures.js | v1.0.2 July 30, 2024 
  * MIT License */
 
-function enc(){
+function enc(){ /* crypto-js 4.2.0 */
 var message = document.getElementById('data1').value;
 var key = document.getElementById('key1').value;
 var encrypted = CryptoJS.AES.encrypt(message, key);
 document.getElementById('t1').value = encrypted;
-document.getElementById('t1').style.height = document.getElementById('t1').scrollHeight + 'px';
+document.getElementById('t1').style.height = document.getElementById('t1').scrollHeight + 'px'; 
 }
+
 
 function dec(){
 var encrypted = document.getElementById('data2').value;
@@ -28,10 +29,19 @@ function hash(){
 }
 
 
-function setHeight(){
-	for(let i=1;i<6;i++){
-	document.getElementById('data' + i).style.height = document.getElementById('data' + i).scrollHeight + 'px';}
+function setHeight1(){
+	document.getElementById('data1').style.height = document.getElementById('data1').scrollHeight + 'px';
 }
+
+function setHeight2(){
+	document.getElementById('data2').style.height = document.getElementById('data2').scrollHeight + 'px';
+}
+
+function setHeight3(){
+	document.getElementById('data3').style.height = document.getElementById('data3').scrollHeight + 'px';
+}
+
+
 
 function copy1(){
   const element = document.querySelector("#t1");
@@ -89,6 +99,8 @@ function copyGuid(){
 }
 
 function clearAll(){
+location.reload();
+/*
 document.getElementById('key1').value ="";
 document.getElementById('key2').value ="";
 document.getElementById('3').innerHTML ="";
@@ -97,7 +109,10 @@ document.getElementById('t1').value ="";
 document.getElementById('data2').value ="";
 document.getElementById('data3').value ="";
 document.getElementById('data4').value ="";
+document.getElementById('data1').value ="";
+*/
 }
+
 
 function clearHash(){
 document.getElementById('data5').value ="";
@@ -121,5 +136,17 @@ function guid(){
 	}
 	const random_uuid = uuidv4();
 	document.getElementById('data6').innerHTML = random_uuid;
+}
+
+var observe;
+if (window.attachEvent) {
+    observe = function (element, event, handler) {
+        element.attachEvent('on'+event, handler);
+    };
+}
+else {
+    observe = function (element, event, handler) {
+        element.addEventListener(event, handler, false);
+    };
 }
 
