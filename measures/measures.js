@@ -1,5 +1,5 @@
 /* Copyright (c) 2024 by Monte Kietpawpan
- * measures.js | v1.0.2 July 30, 2024 
+ * measures.js | v1.0.3 August 1, 2024 
  * MIT License */
 
 function enc(){ /* crypto-js 4.2.0 */
@@ -15,10 +15,10 @@ function dec(){
 var encrypted = document.getElementById('data2').value;
 var key = document.getElementById('key2').value;
 var decrypted = CryptoJS.AES.decrypt(encrypted, key);
-if(decrypted==""){document.getElementById('3').innerHTML = "<b>Decryption Error:</b><font color='red'> Incorrect key or encrypted data.</font>";document.getElementById('data3').innerHTML="";}
+if(decrypted==""){document.getElementById('3').innerHTML = "<font color='red'><i class='fa fa-exclamation-triangle '></i> Incorrect key or encrypted data.</font>";document.getElementById('data3').innerHTML="";}
 else{document.getElementById('data3').innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
 document.getElementById('data3').style.height = document.getElementById('data3').scrollHeight + 'px';
-document.getElementById('3').innerHTML ="<font color='blue'>Successfully decrypted.</font>";}
+document.getElementById('3').innerHTML ="<font color='blue'><i class='fa fa-check-square '></i> Successfully decrypted.</font>";}
 }
 
 function hash(){
@@ -28,10 +28,10 @@ function hash(){
 	document.getElementById("data4").style.height = document.getElementById('data4').scrollHeight + 'px';
 }
 
-
 function setHeight1(){
 	document.getElementById('data1').style.height = document.getElementById('data1').scrollHeight + 'px';
 }
+	
 
 function setHeight2(){
 	document.getElementById('data2').style.height = document.getElementById('data2').scrollHeight + 'px';
@@ -41,6 +41,27 @@ function setHeight3(){
 	document.getElementById('data3').style.height = document.getElementById('data3').scrollHeight + 'px';
 }
 
+function setHeight4(){
+	document.getElementById('data4').style.height = document.getElementById('data4').scrollHeight + 'px';
+}
+
+function setHeight5(){
+	document.getElementById('data5').style.height = document.getElementById('data5').scrollHeight + 'px';
+}
+
+
+
+function setHeighk1(){
+	document.getElementById('key1').style.height = document.getElementById('key1').scrollHeight + 'px';
+}
+
+function setHeighk2(){
+	document.getElementById('key2').style.height = document.getElementById('key2').scrollHeight + 'px';
+}
+
+function setHeightt(){
+	document.getElementById('t1').style.height = document.getElementById('t1').scrollHeight + 'px';
+}
 
 
 function copy1(){
@@ -83,6 +104,21 @@ function copy3(){
   popup.classList.toggle("hide");}, 1200);
 
 }
+
+function copyPK(){
+  const element = document.querySelector("#key1");
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  element.setSelectionRange(0, 0);
+  /* window.alert("Copied!"); */
+  var popup = document.getElementById("r6");
+  popup.classList.toggle("show");
+  setTimeout(function() {
+  popup.classList.toggle("hide");}, 1200);
+
+}
+
 
 function copyGuid(){
   const element = document.querySelector("#data6");
