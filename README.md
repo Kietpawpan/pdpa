@@ -211,8 +211,8 @@ sequenceDiagram
 			Regular_Password_Change-->Server_Backup
 			Server_Backup-->[*]}}}
 ```
-[มาตการหลัก 5 ประการ](https://kietpawpan.github.io/pdpa/pMeasures.html)
-[มาตการเข้ารหัสข้อมูลข่าวสารลับ](https://kietpawpan.github.io/pdpa/measures/encryp.html)
+- [มาตการหลัก 5 ประการ](https://kietpawpan.github.io/pdpa/pMeasures.html)
+- [มาตการเข้ารหัสข้อมูลข่าวสารลับ](https://kietpawpan.github.io/pdpa/measures/encryp.html)
 
 # การประเมินความเสี่ยง
 เพื่อควบคุมให้มีความเสี่ยงต่ำหรือไม่มีนัยสำคัญ
