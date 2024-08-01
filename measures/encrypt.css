@@ -1,19 +1,30 @@
-textarea{
-  font-size: 16px;
-font-family: "Noto Sans Thai", sans-serif;
+label{
+	font-size: 40px;
+	font-weight:bold;
+	color:blue;
+	font-family: "Noto Sans Thai", sans-serif;
+}
+
+
+textarea {
+	font-size: 110%;
+  	width:100%;
+        padding: 10px 10px; 
+    font-family: "Noto Sans Thai", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-
 }
 
 textarea::placeholder {
-  color: red;
-  font-size: 16px;
+  font-size: 30px;
   position: relative;
-  top: -4px;
+  top: -15px;
+  color: #8696a0;
+  opacity: 1; 
+	
 }
 
 textarea#data3, #t1 {
@@ -24,18 +35,21 @@ textarea#data3, #t1 {
 	box-shadow:0 4px 6px rgba(0,0,0,0.1);}
 
 .btn {
-  background-color: grey;/* DodgerBlue;  Blue background */
-  border: none; /* Remove borders */
-  color: white; /* White text */
-  padding: 12px 16px; /* Some padding */
-  font-size: 16px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 25px;
+  cursor: pointer;
   border-radius:5px;
 }
+
 
 .btn:hover {
   background-color: darkgrey;/* RoyalBlue; */
 }
+
+
 
 .popup {
   position: relative;
@@ -99,13 +113,14 @@ textarea#data3, #t1 {
   to {opacity:1 ;}
 }
 
-textarea{
- Height:16px;
-}
+
+
 
 body{
-    font-family: 'Droid Serif', serif;
-    font-size: 14px;
+  /*  font-family: 'Droid Serif', serif; */
+    font-family: "Noto Sans Thai", sans-serif;
+
+    font-size: 20px;
     color: #2f2f2f;
     background-color: #f9f7f1;
 }
@@ -163,9 +178,9 @@ p{
 }
 
 .collumn{
-    font-size: 16px;
-    line-height: 22px;
-    width: 90%;
+    font-size: 30px;
+    line-height: 38px;
+    width: 100%;
     display: inline-block; 
     padding: 0 1% 0 1%;
     vertical-align: top;
@@ -222,18 +237,18 @@ p{
 .collumn .headline.hl3{
     font-weight: 400;
     font-style: italic;
-    font-size: 36px;
+    font-size: 50px;
     box-sizing: border-box;
     padding: 10px 0 10px 0;
 }
 .collumn .headline.hl4{
     font-weight: 700;
-    font-size: 12px;
+    font-size: 25px;
     box-sizing: border-box;
     padding: 10px 0 10px 0;
 }
 .collumn .headline.hl4:before{
-    border-top: 1px solid #2f2f2f;
+    border-top: 0px solid #2f2f2f;
     content: '';
     width: 100px;
     height: 7px;
@@ -241,7 +256,7 @@ p{
     margin: 0 auto;
 }
 .collumn .headline.hl4:after{
-    border-bottom: 1px solid #2f2f2f;
+    border-bottom: 0px solid #2f2f2f;
     content: '';
     width: 100px;
     height: 10px;
@@ -347,6 +362,9 @@ p{
     mix-blend-mode: multiply;
     width: 100%;
 }
+
+
+
 /*________________________________________________________________________________________________________________________________*/
 /*MEDIAQUERIES*/
 @media only all and (max-width: 1300px) {
