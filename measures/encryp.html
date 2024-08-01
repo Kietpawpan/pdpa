@@ -73,7 +73,6 @@
 		Version 1.2 | August 1, 2024
 	</div>
 </div>
-
 <div class="content">
 	<div class="collumn">
         	<div class="head">
@@ -82,36 +81,28 @@
 			</span>
 			<p>
 				<span class="headline hl4">
-					Advanced Encryption Standard<br>(ISO 18033-3)
+					Advanced Encryption Standard, ISO 18033-3
 				</span>
 			</p>
 
 <p align="left">
-<i class="fa fa-check-square "></i> เข้ารหัสข้อมูลข่าวสารลับ (encryption)<br>
-<i class="fa fa-check-square "></i> ไขรหัส (decryption)<br> 
-<i class="fa fa-check-square "></i> กำหนดกุญแจส่วนตัว (private key) 
+<font color="blue">
+<label for="data1">Encryption:
+</label>
+</font>
 </p>
 
-
-<font color="blue">
-	<h3 style="float:left;">
-		Encryption (AES):
-	</h3>
-</font>
-
 <textarea 
-	oninput ="setHeight1()"
-	style="width:100%;"
+	oninput ="setH()"
 	type="text" 
-        col="1"
-	id="data1" 
+        id="data1" 
 	placeholder="Confidential data" 
 	required>
 </textarea>
 
 
 <textarea 	
-	oninput="setHeighk1()" 
+	oninput="setH()" 
 	type="text" 
 	id="key1" 
 	placeholder="Private key" 
@@ -136,9 +127,10 @@
 	</span>
 	</p>
 </div>
-<br>
+<br><br>
 
 <button 
+	class="btn"
 	onclick="enc()" 
 	style="margin-top:5px;
 		float:left;
@@ -146,7 +138,7 @@
 	<i 
 		class="fa fa-lock ">
 	</i>
-			Encrypt
+			ENCRYPT
 </button>
 
 <br><br>
@@ -162,7 +154,7 @@
 	style="width:100%"
 	placeholder="Output"
 	rows="1"
-	oninput="setHeightt()">
+	oninput="setH()">
 </textarea>
 
 <br>
@@ -184,18 +176,16 @@
 	style="float:left">
 </i>
 
-<br>
-
-<font 
-	color="blue">
-	<h3 
-		style="float:left;">
-			Decryption:
-	</h3>
+<br><br>
+<p align="left">
+<label for="data2">
+Decryption:
+</label>
+</p>
 </font>
 
 <textarea 
-	oninput="setHeight2()"
+	oninput="setH()"
 	style="width:100%"
 	type="text" 
 	id="data2" 
@@ -204,7 +194,7 @@
 </textarea>
 
 <textarea 
-	oninput="setHeighk2()" 
+	oninput="setH()" 
 	type="text" id="key2" 
 	placeholder="Private key" 
 	required 
@@ -216,8 +206,9 @@
 <button onclick="dec()" 
 	style="margin-top:5px;
 	float:left;"
+	class="btn"
 	><i class="fa fa-unlock "></i> 
-	Decrypt
+	DECRYPT
 </button>
 <br><br>
 
@@ -230,7 +221,7 @@
 
 <textarea 
 	id="data3"
-	oninput="setHeight3()"
+	oninput="setH()"
 	style="width:100%"
 	placeholder="Output">
 </textarea>
@@ -258,14 +249,14 @@
 
 <br><br>
 
-<button 
+<button class="btn"
 	style="margin-top:5px;
 	float:left;
 	margin-bottom:10px;"
 	onclick="clearAll()">
 		<i class="fa fa-trash ">
 		</i>
-			Clear
+			CLEAR
 </button>
 
 <br><br>
@@ -275,22 +266,24 @@
 
 <div class="collumn">
 	<div class="head">
- 		<span class="headline hl1">
-			ข้อมูลเชิงเทคนิค
+ 		<span class="headline hl3">
+			เทคนิคการเข้ารหัส
 	</div>
 
 	<ol>
-		<li>โปรแกรมนี้ เข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธีมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้รับการรับรองมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> เมื่อปี พ.ศ. 2548</p> 
+		<li>โปรแกรมนี้ เข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธีมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้รับการรับรองมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> เมื่อปี พ.ศ. 2548</p> 
 
-		<li>รหัสจะเจาะได้ยากขึ้น ถ้ามีความยาวมากขึ้น (จำนวนบิทมากขึ้น) โดยจะมีความยาว 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี ขึ้นอยู่กับความยาวของข้อมูลที่นำมาเข้ารหัส รายละเอียดตาม <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
+		<li>รหัสจะเจาะได้ยากขึ้น ถ้า private key มีความยาวมากขึ้น (จำนวนบิทมากขึ้น) โดยความยาวของ private key จะเป็นตัวกำหนด variants ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี บิทยิ่งมาก ยิ่งเจาะยาก (ใช้เวลานาน) รายละเอียดตาม <a href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
 
-		<li>ปัจจุบัน (พ.ศ. 2567) สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
-">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานของรัฐทุกแห่งในประเทศ ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ 
+		<li>ปัจจุบัน (พ.ศ. 2567) สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
+">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาลสหรัฐอเมริกา ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ</p>
+
+		<li>คณะกรรมการด้านระบบความมั่นคงปลอดภัยแห่งชาติ (<a href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) ของสหรัฐอมเริกา กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลราชการลับ ระดับ "TOP  SECRET" โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท สามารถใช้เข้ารหัสข้อมูลราชการลับ ระดับ "SECRET" 
 </p>
 
-		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript เป็น <a style="text-decoration:none;" href="https://raw.githubusercontent.com/Kietpawpan/pdpa/main/measures/encrypt.html">open source</a> จึงไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากผู้เข้ารหัสลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font></p>
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากผู้เข้ารหัสลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font></p>
 
-		<li>ควรกำหนด private key ให้คาดเดาได้ยาก เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ secure hash algorithm เพื่อให้ได้ private key ที่คาดเดายาก  
+		<li>ควรกำหนด private key ให้คาดเดาได้ยาก เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เพื่อแปลง password เป็น private key ที่คาดเดายาก เช่น การ hash ด้วย SHA3-512  
 
 	</ol>
 
@@ -303,14 +296,15 @@
 <textarea 
 	id="data5" 
 	style="width:100%" 
-	placeholder="Password">
+	placeholder="Password"
+	oninput="setH()">
 </textarea>
 
 <br>
 
-<button 
+<button class="btn"
 	onclick="hash()" 
-	style="margin-top:5px;">Hash</button><br><br>
+	style="margin-top:5px;">HASH</button><br><br>
 
 <b>
 	Private Key:
@@ -320,7 +314,7 @@
 
 <textarea 
 	id="data4" 
-	oninput="setHeight4()" 
+	oninput="setH()" 
 	style="width:100%" 
 	placeholder="Output">
 </textarea>
@@ -343,7 +337,7 @@
 			Copied!
 	</span>
 	
-	<button 
+	<button class="btn"
 		onclick="clearHash()">
 			Clear
 	</button>
@@ -352,13 +346,10 @@
 
 
 <div class="head">
-	<span class="headline hl1">
+	<span class="headline hl3">
 		Credits
 	</span>
 </div>
-
-<figure class="figure">				
-<figcaption class="figcaption">
 
 <p>
 
@@ -380,13 +371,17 @@ Modified from user120242/JSFiddle/cdnjs
 
 <br><br>
 <b>AES Standard Document</b><br>
-Printed in 2001 by U.S. National Institute of Standards and Technology
+Released in 2001 by U.S. National Institute of Standards and Technology
 (https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf)
 
 <br><br>
 <b>Transition to Advanced Encryption Standard (AES)</b><br>
-Pronted in 2024 by Cybersecurity and Infrastructure Security Agency (CISA)(https://www.cisa.gov/sites/default/files/2024-05/23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf)
+Relased in 2024 by U.S. Committee on National Security Systems (CNSS)
+(https://www.cisa.gov/sites/default/files/2024-05/23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf)
 
+<br><br>
+<b>CNSS Policy No. 15, Fact Sheet No. 1</b><br>
+Released in June 2003 by Cybersecurity and Infrastructure Security Agency (CISA)(https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/cnss15fs.pdf)
 
 
 <br><br>
@@ -394,12 +389,9 @@ Pronted in 2024 by Cybersecurity and Infrastructure Security Agency (CISA)(https
 complete accuracy cannot be guaranteed.  The author and his organization do not accept any responsibility whatsoever for loss or damage occasioned or claimed to have been occasioned, in part or in full, as a consequence of any person acting or refraining from acting, as a result of a matter contained in this publication.  All or part of this work may be reproduced without further permission provided the source is acknowledged.
 </font>
 
-</figcaption>
-</figure>
 
 <hr>
-<p><font size="-1">
-<center>
+<p><center>
 	Copyright &copy; 2024 Monte Kietpawpan | MIT License
 </center>
 </font>
