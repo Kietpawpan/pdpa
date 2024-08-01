@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!-- 
+===================================
+     Encrypt 1.3 | August 1, 2024
+     (c) 2024 by Monte Kietpawpan
+     MIT License
+===================================
+-->
+
+
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    	<base target="_top">
+    	<meta 
+		http-equiv="Content-Type" 
+		name="viewport" 
+		content="
+			text/html; 
+			charset=UTF-8";
+			width=device-width; 
+			initial-scale=1.0; 
+			maximum-scale=1.0; 
+			minimum-scale=1.0; 
+			user-scalable=yes;"
+	/>
+    	<link 
+		rel="stylesheet" 
+		href="encrypt.css"
+	>
+	<link 
+		rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	>
+	<link 
+		rel="preconnect" 
+		href="https://fonts.googleapis.com"
+	>
+	<link 
+		rel="preconnect" 
+		href="https://fonts.gstatic.com" 
+		crossorigin
+	>
+	<link 
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" 
+		rel="stylesheet"
+	>
+
+</head>
+
+<title>
+	Encrypt
+</title>
+  
+<body>
+<div class="head">
+	<div class="headerobjectswrapper">
+        	<div class="weatherforcastbox">
+			<span style="font-style: italic;">
+				Service Design and
+			</span>
+			<br>
+			<span>
+				Web Apps Development
+			</span>
+		</div>
+        	<header>
+			Encrypt
+		</header>
+    	</div>
+
+	<div class="subhead">
+		Version 1.2 | August 1, 2024
+	</div>
+</div>
+
+<div class="content">
+	<div class="collumn">
+        	<div class="head">
+			<span class="headline hl3">
+				โปรแกรมเข้ารหัสข้อมูล 
+			</span>
+			<p>
+				<span class="headline hl4">
+					Advanced Encryption Standard<br>(ISO 18033-3)
+				</span>
+			</p>
+
+<p align="left">
+<i class="fa fa-check-square "></i> เข้ารหัสข้อมูลข่าวสารลับ (encryption)<br>
+<i class="fa fa-check-square "></i> ไขรหัส (decryption)<br> 
+<i class="fa fa-check-square "></i> กำหนดกุญแจส่วนตัว (private key) 
+</p>
+
+
+<font color="blue">
+	<h3 style="float:left;">
+		Encryption (AES):
+	</h3>
+</font>
+
+<textarea 
+	oninput ="setHeight1()"
+	style="width:100%;"
+	type="text" 
+        col="1"
+	id="data1" 
+	placeholder="Confidential data" 
+	required>
+</textarea>
+
+
+<textarea 	
+	oninput="setHeighk1()" 
+	type="text" 
+	id="key1" 
+	placeholder="Private key" 
+	required 
+	style="margin-top:5px;width:100%">
+</textarea>
+
+<div 
+	class="popup" 
+	style="float:left;">
+	
+<p align="left">
+		<i 
+			class='fa fa-clone' 
+			onclick="copyPK()">
+		</i>
+	<span 
+		class="popuptext" 
+		id="r6" 
+		style="width:150px;">
+			Copied!
+	</span>
+	</p>
+</div>
+<br>
+
+<button 
+	onclick="enc()" 
+	style="margin-top:5px;
+		float:left;
+		margin-bottom:10px;">
+	<i 
+		class="fa fa-lock ">
+	</i>
+			Encrypt
+</button>
+
+<br><br>
+
+<b 
+	style="float:left;">
+		Encrypted data:
+</b>
+
+<br>
+
+<textarea id="t1" 
+	style="width:100%"
+	placeholder="Output"
+	rows="1"
+	oninput="setHeightt()">
+</textarea>
+
+<br>
+
+<div 
+	class="popup" 
+	style="float:left;">
+		<span 
+			class="popuptext" 
+			id="r2" 
+			style="width:150px;">
+				Copied!
+		</span>
+</div>
+
+<i 
+	class='fa fa-clone' 
+	onclick="copy1()" 
+	style="float:left">
+</i>
+
+<br>
+
+<font 
+	color="blue">
+	<h3 
+		style="float:left;">
+			Decryption:
+	</h3>
+</font>
+
+<textarea 
+	oninput="setHeight2()"
+	style="width:100%"
+	type="text" 
+	id="data2" 
+	placeholder="Encrypted data" 
+	required>
+</textarea>
+
+<textarea 
+	oninput="setHeighk2()" 
+	type="text" id="key2" 
+	placeholder="Private key" 
+	required 
+	style="margin-top:5px;width:100%">
+</textarea>
+
+<br>
+
+<button onclick="dec()" 
+	style="margin-top:5px;
+	float:left;"
+	><i class="fa fa-unlock "></i> 
+	Decrypt
+</button>
+<br><br>
+
+
+<b style="float:left;">
+	Decrypted data:
+</b>
+
+<br>
+
+<textarea 
+	id="data3"
+	oninput="setHeight3()"
+	style="width:100%"
+	placeholder="Output">
+</textarea>
+
+<br>
+
+<div 
+	class="popup" 
+	style="float:left;">
+		<p align="left">
+			<i 
+				class='fa fa-clone' 
+				onclick="copy3()">
+			</i>
+		<span 
+			class="popuptext" 
+			id="r4" 
+			style="width:150px;">
+				Copied!
+		</span>
+		</p>
+</div>
+
+<div id="3"></div>
+
+<br><br>
+
+<button 
+	style="margin-top:5px;
+	float:left;
+	margin-bottom:10px;"
+	onclick="clearAll()">
+		<i class="fa fa-trash ">
+		</i>
+			Clear
+</button>
+
+<br><br>
+
+</div>
+
+
+<div class="collumn">
+	<div class="head">
+ 		<span class="headline hl1">
+			ข้อมูลเชิงเทคนิค
+	</div>
+
+	<ol>
+		<li>โปรแกรมนี้ เข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธีมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf" style="text-decoration:none;">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้รับการรับรองมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> เมื่อปี พ.ศ. 2548</p> 
+
+		<li>รหัสจะเจาะได้ยากขึ้น ถ้ามีความยาวมากขึ้น (จำนวนบิทมากขึ้น) โดยจะมีความยาว 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี ขึ้นอยู่กับความยาวของข้อมูลที่นำมาเข้ารหัส รายละเอียดตาม <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
+
+		<li>ปัจจุบัน (พ.ศ. 2567) สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
+">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานของรัฐทุกแห่งในประเทศ ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ 
+</p>
+
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript เป็น <a style="text-decoration:none;" href="https://raw.githubusercontent.com/Kietpawpan/pdpa/main/measures/encrypt.html">open source</a> จึงไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากผู้เข้ารหัสลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font></p>
+
+		<li>ควรกำหนด private key ให้คาดเดาได้ยาก เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ secure hash algorithm เพื่อให้ได้ private key ที่คาดเดายาก  
+
+	</ol>
+
+<font color="blue">
+	<h3>
+		Private Key Generator (SHA3-512):
+	</h3>
+</font>
+
+<textarea 
+	id="data5" 
+	style="width:100%" 
+	placeholder="Password">
+</textarea>
+
+<br>
+
+<button 
+	onclick="hash()" 
+	style="margin-top:5px;">Hash</button><br><br>
+
+<b>
+	Private Key:
+</b>
+
+<br>
+
+<textarea 
+	id="data4" 
+	oninput="setHeight4()" 
+	style="width:100%" 
+	placeholder="Output">
+</textarea>
+
+<br>
+
+<div class="popup">
+
+	<p align="left">
+		<i 
+		class='fa fa-clone' 
+		onclick="copy2()">
+		</i>
+	</p>
+
+	<span 
+		class="popuptext" 
+		id="r3" 
+		style="width:150px;">
+			Copied!
+	</span>
+	
+	<button 
+		onclick="clearHash()">
+			Clear
+	</button>
+
+</div>
+
+
+<div class="head">
+	<span class="headline hl1">
+		Credits
+	</span>
+</div>
+
+<figure class="figure">				
+<figcaption class="figcaption">
+
+<p>
+
+<br><br>
+<b>Service Design & Development</b><br>
+Monte Kietpawpan<br>
+Director, MNRE Service Link Center
+
+<br><br>
+<b>Newspaper Style Design</b>
+<br>
+Copyright &copy; 2024 by Silke V (https://codepen.io/silkine/pen/QWBxVX)
+
+<br><br>
+<b>AES Encryption</b><br>
+Modified from user120242/JSFiddle/cdnjs
+(https://jsfiddle.net/rLt7haxc/6/)
+(https://cdnjs.com/libraries/crypto-js)
+
+<br><br>
+<b>AES Standard Document</b><br>
+Printed in 2001 by U.S. National Institute of Standards and Technology
+(https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf)
+
+<br><br>
+<b>Transition to Advanced Encryption Standard (AES)</b><br>
+Pronted in 2024 by Cybersecurity and Infrastructure Security Agency (CISA)(https://www.cisa.gov/sites/default/files/2024-05/23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf)
+
+
+
+<br><br>
+<font color="red">Although every effort has been made to ensure the accuracy of the material contained in this publication, 
+complete accuracy cannot be guaranteed.  The author and his organization do not accept any responsibility whatsoever for loss or damage occasioned or claimed to have been occasioned, in part or in full, as a consequence of any person acting or refraining from acting, as a result of a matter contained in this publication.  All or part of this work may be reproduced without further permission provided the source is acknowledged.
+</font>
+
+</figcaption>
+</figure>
+
+<hr>
+<p><font size="-1">
+<center>
+	Copyright &copy; 2024 Monte Kietpawpan | MIT License
+</center>
+</font>
+</p>
+</div>
+
+</div>
+
+<script src="crypto-js.min.js"></script>
+<script src="sha3.js"></script>
+<script src="ref.js"></script>
+<script src="measures.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+
+</html>
