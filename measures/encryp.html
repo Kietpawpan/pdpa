@@ -253,10 +253,13 @@ Decrypted:
 		<li>ปัจจุบัน (พ.ศ. 2567) สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
 ">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาล ใช้วิธี AES ในการเข้ารหัสข้อมูลราชการลับ</p>
 
-		<li>คณะกรรมการด้านระบบความมั่นคงปลอดภัยแห่งชาติ (<a href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) ของสหรัฐอมเริกา กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลราชการลับ ระดับ "TOP  SECRET" โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท สามารถใช้เข้ารหัสข้อมูลราชการลับ ระดับ "SECRET" 
+		<li>คณะกรรมการด้านระบบความมั่นคงปลอดภัยแห่งชาติ (<a href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) ของสหรัฐอเมริกา กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลราชการลับ ระดับ "TOP  SECRET" โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท สามารถใช้เข้ารหัสข้อมูลราชการลับ ระดับ "SECRET" 
 </p>
 
-		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากผู้เข้ารหัสลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> ดังนั้น สมควรกำหนด private key ที่ปลอดภัย เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เช่น SHA3-512 เพื่อแปลง password เป็น private key   
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากผู้เข้ารหัสลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </p>
+		
+		<li>ควรกำหนด private key ที่มีความปลอดภัย เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เช่น SHA3-512 เพื่อแปลง password เป็น private key </p>
+		<li>ต้องเก็บรักษา private key ไว้เป็นความลับระดับ TOP SECRET</li>
 
 	</ol>
 
