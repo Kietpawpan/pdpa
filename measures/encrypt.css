@@ -1,14 +1,24 @@
+.icon{
+font-size:4vw;
+}
 
+button{
+margin-top:100px;
+margin-bottom:5vw;
+
+}
 label{
-	font-size: 3vw;
+	font-size: 5vw;
 	font-weight:bold;
 	color:blue;
 	font-family: "Noto Sans Thai", sans-serif;
+	margin-top:2vw;
 }
 
 
 textarea {
-	font-size: 110%;
+float:left;
+	font-size: 5vw;
   	width:100%;
         padding: 10px 10px; 
     font-family: "Noto Sans Thai", sans-serif;
@@ -17,10 +27,11 @@ textarea {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+margin-bottom:1vw;
 }
 
 textarea::placeholder {
-  font-size: 2vw;
+  font-size: 4vw;
   position: relative;
   top: -15px;
   color: #8696a0;
@@ -40,7 +51,7 @@ textarea#data3, #t1 {
   border: none;
   color: white;
   padding: 12px 16px;
-  font-size: 2vw;
+  font-size: 5vw;
   cursor: pointer;
   border-radius:5px;
 }
@@ -60,12 +71,13 @@ textarea#data3, #t1 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
 }
 
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
-  width: 500px;
+  width: 15vw;
   background-color: #555;
   color: #fff;
   text-align: center;
@@ -97,6 +109,7 @@ textarea#data3, #t1 {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
+  font-size:3vw;
 }
 
 .popup .hide {
@@ -123,12 +136,12 @@ body{
 
     font-size: 2vw;
     color: #2f2f2f;
-    background-color: #f9f7f1;
+    background-color: #f6f6f6;/* #f9f7f1; */
 }
 header{
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 8vw;/* 80px; */
+    font-size: 15vw;/* 80px; */
     text-transform: uppercase;
     display: inline-block;
     line-height: 72px;
@@ -153,6 +166,7 @@ p{
     border-bottom: 2px solid #2f2f2f;
     border-top: 2px solid #2f2f2f;
     padding: 12px 0 12px 0;
+    font-size:8vw;	
 
 }
 .weatherforcastbox{
@@ -171,6 +185,7 @@ p{
     word-spacing: -.31em;
     display: inline-block;
     margin: 30px 2% 0 2%;
+    width:90vw;	
 
 
 }
@@ -179,8 +194,8 @@ p{
 }
 
 .collumn{
-    font-size: 2vw;
-    line-height: 3vw;
+    font-size: 4vw;
+    line-height: 6vw;
     width: 100%;
     display: inline-block; 
     padding: 0 1% 0 1%;
@@ -238,7 +253,7 @@ p{
 .collumn .headline.hl3{
     font-weight: 400;
     font-style: italic;
-    font-size: 4vw;
+    font-size: 5vw;
     box-sizing: border-box;
     padding: 10px 0 10px 0;
 }
