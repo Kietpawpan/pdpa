@@ -43,12 +43,11 @@ function copy1(){
   element.setSelectionRange(0, 99999);
   document.execCommand('copy');
   element.setSelectionRange(0, 0);
-  /* window.alert("Copied!"); */
-  var popup = document.getElementById("r2");
-  popup.classList.toggle("show");
-  setTimeout(function() {
-  popup.classList.toggle("hide");}, 1200);
-  }
+  var popup = document.getElementById("c2");
+  popup.innerHTML ="<b>Copied!</b>";
+  setTimeout(function () {
+  popup.innerHTML ="<i style='font-size:4vw;' class='fa fa-clone' onclick='copy1()'></i>";}, 1200);
+ }
 	
 function copy2(){
   const element = document.querySelector("#data4");
@@ -56,11 +55,10 @@ function copy2(){
   element.setSelectionRange(0, 99999);
   document.execCommand('copy');
   element.setSelectionRange(0, 0);
-  /* window.alert("Copied!"); */
-  var popup = document.getElementById("r3");
-  popup.classList.toggle("show");
- setTimeout(function() {
-             popup.classList.toggle("hide");}, 1200);
+  var popup = document.getElementById("c4");
+  popup.innerHTML ="<b>Copied!</b>";
+  setTimeout(function () {
+  popup.innerHTML ="<i style='font-size:4vw;' class='fa fa-clone' onclick='copy2()'></i>";}, 1200);
 
 }
 
@@ -71,10 +69,10 @@ function copy3(){
   document.execCommand('copy');
   element.setSelectionRange(0, 0);
   /* window.alert("Copied!"); */
-  var popup = document.getElementById("r4");
-  popup.classList.toggle("show");
-  setTimeout(function() {
-  popup.classList.toggle("hide");}, 1200);
+  var popup = document.getElementById("c3");
+  popup.innerHTML ="<b>Copied!</b>";
+  setTimeout(function () {
+  popup.innerHTML ="<i style='font-size:4vw;' class='fa fa-clone' onclick='copy3()'></i>";}, 1200);
 
 }
 
@@ -85,12 +83,12 @@ function copyPK(){
   document.execCommand('copy');
   element.setSelectionRange(0, 0);
   /* window.alert("Copied!"); */
-  var popup = document.getElementById("r6");
-  popup.classList.toggle("show");
-  setTimeout(function() {
-  popup.classList.toggle("hide");}, 1200);
-
+  var popup = document.getElementById("c1");
+  popup.innerHTML ="<b>Copied!</b>";
+  setTimeout(function () {
+  popup.innerHTML ="<i style='font-size:4vw;' class='fa fa-clone' onclick='copyPK()'></i>";}, 1200);
 }
+
 
 
 function copyGuid(){
