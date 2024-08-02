@@ -246,20 +246,20 @@ Decrypted:
 	</div>
 
 	<ol>
-		<li>เป็นการเข้ารหัสข้อมูลแบบ block ciphers ตามวิธี (<a href="fips-197.pdf">Advanced Encryption Standard (AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งเป็นมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> ตั้งแต่ปี พ.ศ. 2548</p> 
+		<li>เป็นการเข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธี <a style="text-decoration:none;" href="fips-197.pdf">Advanced Encryption Standard (AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) หรือมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a></p> 
 
 		<li>รหัสจะเจาะได้ยาก ถ้า private key มีความยาว (จำนวนบิทมาก) โดยความยาวของ private key จะกำหนด variants ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี บิทยิ่งมาก การเข้ารหัสโดยผสมข้อมูลกับ round key ในลักษณะ nonlinear complex modification จะเพิ่มรอบมากขึ้น เป็น 10 12 และ 14 รอบ ตามลำดับ รายละเอียดตาม <a href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
 
-		<li>ปัจจุบัน (พ.ศ. 2567) สำนักงานความปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
-">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาล ใช้วิธี AES ในการเข้ารหัสข้อมูลราชการลับ</p>
+		<li>ในปี พ.ศ. 2567 สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
+">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานของรัฐในประเทศ ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ แทนวิธีเดิม (Data Encryption Standard หรือ DES)</p>
 
 		<li>คณะกรรมการด้านระบบความปลอดภัยแห่งชาติ (<a href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) ของสหรัฐอเมริกา กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลราชการลับ ระดับ "TOP  SECRET" โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท สามารถใช้เข้ารหัสข้อมูลราชการลับ ระดับ "SECRET" 
 </p>
 
-		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากผู้เข้ารหัสลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </p>
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </p>
 		
-		<li>ควรกำหนด private key ที่มีความปลอดภัย เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เช่น SHA3-512 เพื่อแปลง password เป็น private key </p>
-		<li>ต้องเก็บรักษา private key ไว้เป็นความลับระดับ TOP SECRET</li>
+		<li>ควรกำหนด private key ให้คาดเดาได้ยาก เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เช่น SHA3-512</p>
+		<li>ต้องเก็บรักษา private key ไว้เป็นความลับ ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้องเท่านั้น</li>
 
 	</ol>
 
