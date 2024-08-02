@@ -253,10 +253,10 @@ Decrypted:
 		<li>ในปี พ.ศ. 2567 สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
 ">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานของรัฐในประเทศ ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ แทนวิธีเดิม (Data Encryption Standard หรือ DES)</p>
 
-		<li>คณะกรรมการด้านระบบความปลอดภัยแห่งชาติ (<a href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) ของสหรัฐอเมริกา กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลราชการลับ ระดับ "TOP  SECRET" โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท สามารถใช้เข้ารหัสข้อมูลราชการลับ ระดับ "SECRET" 
+		<li>คณะกรรมการด้านระบบความปลอดภัยแห่งชาติ (<a style="text-decoration:none;" href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) ของสหรัฐอเมริกา กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลข่าวสารลับ ระดับลับที่สุด (TOP  SECRET) โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท ใช้เข้ารหัสข้อมูลราชการลับมาก (SECRET) 
 </p>
 
-		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </p>
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a style="text-decoration:none;" href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </p>
 		
 		<li>ควรกำหนด private key ให้คาดเดาได้ยาก เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เช่น SHA3-512</p>
 		<li>ต้องเก็บรักษา private key ไว้เป็นความลับ ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้องเท่านั้น</li>
