@@ -20,6 +20,8 @@
 			charset=UTF-8";
 			width=device-width; 
 			initial-scale=1.0; 
+			maximum-scale=1.0; 
+			minimum-scale=1.0; 
 			user-scalable=yes;"
 	/>
     	<link 
@@ -46,55 +48,40 @@
 
 </head>
 
-<title>
+<title> 
 	Encrypt
 </title>
   
 <body>
+<br><br><br>
 <div class="head">
 	<div class="headerobjectswrapper">
-        	<div class="weatherforcastbox">
-			<span style="font-style: italic;">
-				Service Design and
-			</span>
-			<br>
-			<span>
-				Web Apps Development
-			</span>
-		</div>
-        	<header>
+           	<header>
 			Encrypt
 		</header>
     	</div>
 
 	<div class="subhead">
-		Version 1.2 | August 1, 2024
+		โปรแกรมเข้ารหัสข้อมูล
 	</div>
 </div>
 <div class="content">
 	<div class="collumn">
         	<div class="head">
 			<span class="headline hl3">
-				โปรแกรมเข้ารหัสข้อมูล 
+				Advanced Encryption Standard 
 			</span>
 			<p>
 				<span class="headline hl4">
-					Advanced Encryption Standard, ISO 18033-3
 				</span>
 			</p>
-
-<p align="left">
-<font color="blue">
-<label for="data1">Encryption:
-</label>
-</font>
-</p>
+</div>
 
 <textarea 
 	oninput ="setH()"
 	type="text" 
         id="data1" 
-	placeholder="Confidential data" 
+	placeholder="Classified information" 
 	required>
 </textarea>
 
@@ -105,7 +92,7 @@
 	id="key1" 
 	placeholder="Private key" 
 	required 
-	style="margin-top:5px;width:100%">
+	style="margin-top:5px;">
 </textarea>
 
 <div 
@@ -113,44 +100,46 @@
 	style="float:left;">
 	
 <p align="left">
-		<i 
+<span id="c1">
+		<i 	style="font-size:4vw;"
 			class='fa fa-clone' 
 			onclick="copyPK()">
 		</i>
+</span>
 	<span 
 		class="popuptext" 
 		id="r6" 
 		style="width:150px;">
 			Copied!
 	</span>
-	</p>
+</p>
 </div>
+<br><br><br><br>
 <br><br>
 
+
+<p align="right">
 <button 
 	class="btn"
 	onclick="enc()" 
 	style="margin-top:5px;
-		float:left;
 		margin-bottom:10px;">
 	<i 
 		class="fa fa-lock ">
 	</i>
 			ENCRYPT
 </button>
-
-<br><br>
-
-<b 
-	style="float:left;">
-		Encrypted data:
-</b>
+</p>
 
 <br>
-
+<p align="left">
+<b>
+Encrypted:
+</b>
+</p>
 <textarea id="t1" 
-	style="width:100%"
-	placeholder="Output"
+	style=""
+	placeholder="Output/Ciphertext"
 	rows="1"
 	oninput="setH()">
 </textarea>
@@ -160,31 +149,34 @@
 <div 
 	class="popup" 
 	style="float:left;">
-		<span 
-			class="popuptext" 
-			id="r2" 
-			style="width:150px;">
-				Copied!
-		</span>
-</div>
 
-<i 
+<span id="c2">
+<i
+	style="font-size:4vw;" 
 	class='fa fa-clone' 
 	onclick="copy1()" 
 	style="float:left">
 </i>
+</span>
+</div>
 
-<br><br>
-<p align="left">
-<label for="data2">
-Decryption:
-</label>
 </p>
 </font>
+<br><br><br>
+<div class="head">
+			<span class="headline hl3">
+				Ciphertext Decryption 
+			</span>
+			<p>
+				<span class="headline hl4">
+				</span>
+			</p>
+</div>
+
 
 <textarea 
 	oninput="setH()"
-	style="width:100%"
+	style=""
 	type="text" 
 	id="data2" 
 	placeholder="Encrypted data" 
@@ -196,32 +188,29 @@ Decryption:
 	type="text" id="key2" 
 	placeholder="Private key" 
 	required 
-	style="margin-top:5px;width:100%">
+	style="margin-top:5px;">
 </textarea>
 
 <br>
-
+<p align="right">
 <button onclick="dec()" 
 	style="margin-top:5px;
-	float:left;"
 	class="btn"
 	><i class="fa fa-unlock "></i> 
 	DECRYPT
 </button>
-<br><br>
-
-
-<b style="float:left;">
-	Decrypted data:
-</b>
-
+</p>
 <br>
-
+<p align="left">
+<b>
+Decrypted:
+</b>
+</p>
 <textarea 
 	id="data3"
 	oninput="setH()"
-	style="width:100%"
-	placeholder="Output">
+	style=""
+	placeholder="Output/Plaintext">
 </textarea>
 
 <br>
@@ -230,10 +219,13 @@ Decryption:
 	class="popup" 
 	style="float:left;">
 		<p align="left">
+<span id="c3">
 			<i 
+				style="font-size:4vw;" 
 				class='fa fa-clone' 
 				onclick="copy3()">
 			</i>
+</span>
 		<span 
 			class="popuptext" 
 			id="r4" 
@@ -249,7 +241,7 @@ Decryption:
 
 <button class="btn"
 	style="margin-top:5px;
-	float:left;
+	float:right;
 	margin-bottom:10px;"
 	onclick="clearAll()">
 		<i class="fa fa-trash ">
@@ -269,41 +261,39 @@ Decryption:
 	</div>
 
 	<ol>
-		<li>โปรแกรมนี้ เข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธีมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้รับการรับรองมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> เมื่อปี พ.ศ. 2548</p> 
+		<li>เป็นการเข้ารหัสข้อมูลแบบ block ciphers ตามวิธีมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้มาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> เมื่อปี พ.ศ. 2548</p> 
 
-		<li>รหัสจะเจาะได้ยากขึ้น ถ้า private key มีความยาวมากขึ้น (จำนวนบิทมากขึ้น) โดยความยาวของ private key จะเป็นตัวกำหนด variants ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี บิทยิ่งมาก ยิ่งเจาะยาก (ใช้เวลานาน) รายละเอียดตาม <a href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
+		<li>รหัสจะเจาะได้ยาก ถ้า private key มีความยาว (จำนวนบิทมาก) โดยความยาวของ private key จะเป็นตัวกำหนด variants ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี บิทยิ่งมาก การเข้ารหัสโดยผสมข้อมูลกับ round key ในลักษณะ nonlinear complex modification จะเพิ่มรอบมากขึ้น เป็น 10 12 และ 14 รอบตามลำดับ รายละเอียดตาม <a href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
 
 		<li>ปัจจุบัน (พ.ศ. 2567) สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
-">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาลสหรัฐอเมริกา ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ</p>
+">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาลสหรัฐอเมริกา ใช้วิธี AES ในการเข้ารหัสข้อมูลราชการลับ</p>
 
 		<li>คณะกรรมการด้านระบบความมั่นคงปลอดภัยแห่งชาติ (<a href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) ของสหรัฐอมเริกา กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลราชการลับ ระดับ "TOP  SECRET" โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท สามารถใช้เข้ารหัสข้อมูลราชการลับ ระดับ "SECRET" 
 </p>
 
-		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากผู้เข้ารหัสลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font></p>
-
-		<li>ควรกำหนด private key ให้คาดเดาได้ยาก เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เพื่อแปลง password เป็น private key ที่คาดเดายาก เช่น การ hash ด้วย SHA3-512  
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากผู้เข้ารหัสลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> ดังนั้น สมควรกำหนด private key ที่ปลอดภัย เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เช่น SHA3-512 เพื่อแปลง password เป็น private key   
 
 	</ol>
 
 <font color="blue">
 	<h3>
-		Private Key Generator (SHA3-512):
+		Private Key Generator:
 	</h3>
 </font>
 
 <textarea 
 	id="data5" 
-	style="width:100%" 
+	style="" 
 	placeholder="Password"
 	oninput="setH()">
 </textarea>
 
 <br>
-
+<p align="right">
 <button class="btn"
 	onclick="hash()" 
-	style="margin-top:5px;">HASH</button><br><br>
-
+	style="margin-top:5px;">HASH</button><br>
+</p>
 <b>
 	Private Key:
 </b>
@@ -313,8 +303,8 @@ Decryption:
 <textarea 
 	id="data4" 
 	oninput="setH()" 
-	style="width:100%" 
-	placeholder="Output">
+	style="" 
+	placeholder="Output/SHA3-512 hashed">
 </textarea>
 
 <br>
@@ -322,10 +312,12 @@ Decryption:
 <div class="popup">
 
 	<p align="left">
-		<i 
+<span id="c4">
+		<i style="font-size:4vw;" 
 		class='fa fa-clone' 
 		onclick="copy2()">
 		</i>
+<span>
 	</p>
 
 	<span 
@@ -390,7 +382,7 @@ complete accuracy cannot be guaranteed.  The author and his organization do not 
 
 <hr>
 <p><center>
-	Copyright &copy; 2024 Monte Kietpawpan | MIT License
+	Copyright &copy; 2024 Monte Kietpawpan<br>MIT License
 </center>
 </font>
 </p>
