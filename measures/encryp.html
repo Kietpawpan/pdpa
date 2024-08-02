@@ -240,22 +240,18 @@ Decrypted:
 
 <br><br>
 
-</div>
-
-
-<div class="collumn">
 	<div class="head">
  		<span class="headline hl3">
 			เทคนิคการเข้ารหัส
 	</div>
 
 	<ol>
-		<li>เป็นการเข้ารหัสข้อมูลแบบ block ciphers ตามวิธีมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งได้มาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> เมื่อปี พ.ศ. 2548</p> 
+		<li>เป็นการเข้ารหัสข้อมูลแบบ block ciphers ตามวิธีมาตรฐานการเข้ารหัสขั้นสูง (<a href="fips-197.pdf">Advanced Encryption Standrad : AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) ซึ่งเป็นมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a> ตั้งแต่ปี พ.ศ. 2548</p> 
 
-		<li>รหัสจะเจาะได้ยาก ถ้า private key มีความยาว (จำนวนบิทมาก) โดยความยาวของ private key จะเป็นตัวกำหนด variants ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี บิทยิ่งมาก การเข้ารหัสโดยผสมข้อมูลกับ round key ในลักษณะ nonlinear complex modification จะเพิ่มรอบมากขึ้น เป็น 10 12 และ 14 รอบตามลำดับ รายละเอียดตาม <a href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
+		<li>รหัสจะเจาะได้ยาก ถ้า private key มีความยาว (จำนวนบิทมาก) โดยความยาวของ private key จะกำหนด variants ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี บิทยิ่งมาก การเข้ารหัสโดยผสมข้อมูลกับ round key ในลักษณะ nonlinear complex modification จะเพิ่มรอบมากขึ้น เป็น 10 12 และ 14 รอบ ตามลำดับ รายละเอียดตาม <a href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
 
 		<li>ปัจจุบัน (พ.ศ. 2567) สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
-">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาลสหรัฐอเมริกา ใช้วิธี AES ในการเข้ารหัสข้อมูลราชการลับ</p>
+">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาล ใช้วิธี AES ในการเข้ารหัสข้อมูลราชการลับ</p>
 
 		<li>คณะกรรมการด้านระบบความมั่นคงปลอดภัยแห่งชาติ (<a href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) ของสหรัฐอมเริกา กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลราชการลับ ระดับ "TOP  SECRET" โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท สามารถใช้เข้ารหัสข้อมูลราชการลับ ระดับ "SECRET" 
 </p>
