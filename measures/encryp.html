@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- 
 ===================================
-     Encrypt 1.4 | August 2, 2024
+     Encrypt 1.5 | August 3, 2024
      (c) 2024 by Monte Kietpawpan
      MIT License
 ===================================
@@ -68,14 +68,14 @@
 <div class="content">
 	<div class="collumn">
         	<div class="head">
-			<span class="headline hl3">
+			<span class="headline hl3a">
 				Advanced Encryption Standard 
 			</span>
 			<p>
 				<span class="headline hl4">
 				</span>
 			</p>
-</div>
+		</div>
 
 <textarea 
 	oninput ="setH()"
@@ -99,22 +99,14 @@
 	class="popup" 
 	style="float:left;">
 	
-<p align="left">
-<span id="c1">
-		<i 	style="font-size:4vw;"
-			class='fa fa-clone' 
+	<p align="left">
+	<span id="c1">
+		<i 	class='fa fa-clone' 
 			onclick="copyPK()">
 		</i>
-</span>
-	<span 
-		class="popuptext" 
-		id="r6" 
-		style="width:150px;">
-			Copied!
 	</span>
-</p>
+	</p>
 </div>
-<br><br><br><br>
 <br><br>
 
 
@@ -140,7 +132,6 @@ Encrypted:
 <textarea id="t1" 
 	style=""
 	placeholder="Output/Ciphertext"
-	rows="1"
 	oninput="setH()">
 </textarea>
 
@@ -150,21 +141,21 @@ Encrypted:
 	class="popup" 
 	style="float:left;">
 
-<span id="c2">
-<i
-	style="font-size:4vw;" 
+	<span id="c2">
+	<i
 	class='fa fa-clone' 
 	onclick="copy1()" 
 	style="float:left">
-</i>
-</span>
+	</i>
+	</span>
 </div>
 
 </p>
+
 </font>
-<br><br><br>
+<br><br>
 <div class="head">
-			<span class="headline hl3">
+			<span class="headline hl3a">
 				AES Decryption 
 			</span>
 </div>
@@ -211,22 +202,18 @@ Decrypted:
 
 <br>
 
-<div 
-	class="popup" 
-	style="float:left;">
+<div style="float:left;">
 <span id="c3">
 			<i 
-				style="font-size:4vw;" 
 				class='fa fa-clone' 
 				onclick="copy3()">
 			</i>
 </span>
-
 </div>
 
 <div id="3"></div>
 
-<br><br>
+<br>
 
 <button class="btn"
 	style="margin-top:5px;
@@ -239,16 +226,18 @@ Decrypted:
 </button>
 
 <br><br>
-
+<hr>
 	<div class="head">
  		<span class="headline hl3">
 			เทคนิคการเข้ารหัส
-	</div>
-
+		</span>
+<hr>	
+<span class="headline hl3b">
 	<ol>
-		<li>เป็นการเข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธี <a style="text-decoration:none;" href="fips-197.pdf">Advanced Encryption Standard (AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) หรือมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a></p> 
+		<li> เป็นการเข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธี <a style="text-decoration:none;" href="fips-197.pdf">Advanced Encryption Standard (AES)</a> ของ U.S. National Institute of Standards and Technology (NIST) หรือมาตรฐาน <a style="text-decoration:none;" href="https://www.iso.org/obp/ui/en/#iso:std:iso-iec:18033:-3:ed-2:v1:en:sec:5.2">ISO/IEC 18033-3</a></p> 
 
-		<li>รหัสจะเจาะได้ยาก ถ้า private key มีความยาว (จำนวนบิทมาก) โดยความยาวของ private key จะกำหนด variants ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี บิทยิ่งมาก การเข้ารหัสโดยผสมข้อมูลกับ round key ในลักษณะ nonlinear complex modification จะเพิ่มรอบมากขึ้น เป็น 10 12 และ 14 รอบ ตามลำดับ โดยมี algorithm ในภาษา JavaScript เผยแพร่บน <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js)</a></p>
+		<li>รหัสจะเจาะได้ยาก ถ้า private key ที่ใช้ล็อคข้อมูล มีความยาวพอสมควร ซึ่งวัดเป็นบิท (bit หรือ binary number คือเลข 1 หรือ 0 เท่านั้น) โดยที่ 8 บิท เท่ากับ 1 ไบต์ (byte) หรือ 1 ตัวอักษร ในโปรแกรมที่ใช้อักขระแบบ UTF-8 เช่น “a” คือ 01100001 ทั้งนี้ ความยาวของ private key จะกำหนด round keys ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี บิทยิ่งมาก การเข้ารหัสจะใช้ข้อมูลที่จะเข้ารหัส (plaintext) ผสมกับ round keys หลายชุด ในลักษณะที่ซับซ้อน (แตกข้อมูลเป็น block และสับเป็นชิ้น ๆ สลัยตำแหน่ง ไม่ให้แปรผันตรงกับข้อมูลเดิม (nonlinear complex modification) โดยมีการเปลี่ยน round key ทุกรอบ และเพิ่มรอบการเข้ารหัสเป็น 10 12 และ 14 รอบ สำหรับ round keys ขนาด 128 192 และ 256 บิท ตามลำดับ 
+		<li>โปรแกรมนี้ใช้ JavaScript ในการเข้ารหัสแบบ AES โดยอาศัย source code จาก <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js เวอร์ชัน 4.2.0)</a></p>
 
 		<li>ในปี พ.ศ. 2567 สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
 ">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานของรัฐในประเทศ ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ แทนวิธีเดิม (Data Encryption Standard หรือ DES)</p>
@@ -258,21 +247,23 @@ Decrypted:
 
 		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a style="text-decoration:none;" href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </p>
 		
-		<li>ควรกำหนด private key ให้คาดเดาได้ยาก เช่น การนำ password ที่ตนเองจำได้ง่าย มา hash เป็น private key โดยใช้ Secure Hash Algorithm (SHA) เช่น SHA3-512</p>
-		<li>ต้องเก็บรักษา private key ไว้เป็นความลับ ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้องเท่านั้น</li>
+		<li>ควรกำหนด private key ให้คาดเดาได้ยาก และเก็บเป็นความลับ ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้องเท่านั้น
+		<li>สำหรับ Developer หากจำเป็นต้องใช้ private key ใน source code ควรนำ private key นั้น มาทำการ hash แล้วบันทึก hashed text แทน โดยใช้ Secure Hash Algorithm (SHA) ที่ยังไม่มีประวัติการถูกเจาะสำเร็จ เช่น SHA3-512</p>
+</ol>
+</span>	
+</div>
 
-	</ol>
-
+<div>
 <font color="blue">
 	<h3>
-		Private Key Generator:
+		SHA3-512:
 	</h3>
 </font>
 
 <textarea 
 	id="data5" 
 	style="" 
-	placeholder="Password"
+	placeholder="Private key"
 	oninput="setH()">
 </textarea>
 
@@ -280,10 +271,12 @@ Decrypted:
 <p align="right">
 <button class="btn"
 	onclick="hash()" 
-	style="margin-top:5px;">HASH</button><br>
+	style="margin-top:5px;"><i class="fa fa-lock "></i>
+	HASH
+</button><br>
 </p>
 <b>
-	Private Key:
+	Hashed:
 </b>
 
 <br>
@@ -292,79 +285,87 @@ Decrypted:
 	id="data4" 
 	oninput="setH()" 
 	style="" 
-	placeholder="Output/SHA3-512 hashed">
+	placeholder="Hashed text">
 </textarea>
 
 <br>
 
-<div class="popup">
+
 
 	<p align="left">
 <span id="c4">
-		<i style="font-size:4vw;" 
+		<i  
 		class='fa fa-clone' 
 		onclick="copy2()">
 		</i>
 <span>
 	</p>
 
-	<span 
-		class="popuptext" 
-		id="r3" 
-		style="width:150px;">
-			Copied!
-	</span>
-	
+<p align="right">
 	<button class="btn"
-		onclick="clearHash()">
-			Clear
+
+		onclick="clearHash()"><i class="fa fa-trash "></i>
+			 CLEAR
 	</button>
+</p>
 
 </div>
+
 
 
 <div class="head">
-	<span class="headline hl3">
-		Credits
-	</span>
-</div>
+ 		<span class="headline hl3"><hr>
+			Credits
+		</span>
+<hr>	
+<span class="headline hl3b">
 
-<p>
-
-<br><br>
-<b>Service Design & Development</b><br>
+<b>Service Design</b><br>
 Monte Kietpawpan<br>
-Director, MNRE Service Link Center
-
-<br><br>
-<b>Newspaper Style Design</b>
-<br>
-Copyright &copy; 2024 by Silke V (https://codepen.io/silkine/pen/QWBxVX)
+MNRE Service Link Center
 
 <br><br>
 <b>AES Encryption</b><br>
-Modified from user120242/JSFiddle/cdnjs
+user120242/JSFiddle/cdnjs
 (https://jsfiddle.net/rLt7haxc/6/)
 (https://cdnjs.com/libraries/crypto-js)
 
 <br><br>
-<b>AES Standard Document</b><br>
-Released in 2001 by U.S. National Institute of Standards and Technology
+<b>AES Document</b><br>
+U.S. National Institute of Standards and Technology
 (https://csrc.nist.gov/files/pubs/fips/197/final/docs/fips-197.pdf)
 
 <br><br>
-<b>Transition to Advanced Encryption Standard (AES)</b><br>
-Relased in 2024 by U.S. Committee on National Security Systems (CNSS)
-(https://www.cisa.gov/sites/default/files/2024-05/23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf)
+<b>Transition to AES</b><br>
+U.S. Committee on National Security Systems (CNSS)
+(https://www.cisa.gov/
+sites/default/files/
+2024-05/23_0918_fpic_
+AES-Transition-
+WhitePaper_Final_
+508C_24_0513.pdf)
 
 <br><br>
 <b>CNSS Policy No. 15, Fact Sheet No. 1</b><br>
-Released in June 2003 by Cybersecurity and Infrastructure Security Agency (CISA)(https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/cnss15fs.pdf)
+Cybersecurity and Infrastructure Security Agency (CISA)<br>
+(https://csrc.nist.gov/
+csrc/media/projects/
+cryptographic-module-
+validation-program/
+documents/cnss15fs.pdf)
 
 
 <br><br>
-<font color="red">Although every effort has been made to ensure the accuracy of the material contained in this publication, 
-complete accuracy cannot be guaranteed.  The author and his organization do not accept any responsibility whatsoever for loss or damage occasioned or claimed to have been occasioned, in part or in full, as a consequence of any person acting or refraining from acting, as a result of a matter contained in this publication.  All or part of this work may be reproduced without further permission provided the source is acknowledged.
+<font color="red">
+<div class="head">
+ 		<span class="headline hl3"><hr>
+			Disclaimer
+		</span>
+<hr>	
+<span class="headline hl3b">
+
+
+Although every effort has been made to ensure the accuracy of the material contained in this publication, complete accuracy cannot be guaranteed.  The author and his organization do not accept any responsibility whatsoever for loss or damage occasioned or claimed to have been occasioned, in part or in full, as a consequence of any person acting or refraining from acting, as a result of a matter contained in this publication.  All or part of this work may be reproduced without further permission provided the source is acknowledged.
 </font>
 
 
