@@ -68,7 +68,7 @@ function copy3(){
   element.setSelectionRange(0, 99999);
   document.execCommand('copy');
   element.setSelectionRange(0, 0);
-  /* window.alert("Copied!"); */
+  document.getElementById("3").innerHTML="";
   var popup = document.getElementById("c3");
   popup.innerHTML ="<b><font color='RoyalBlue'>Copied!</font></b>";
   setTimeout(function () {
