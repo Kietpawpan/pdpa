@@ -1,5 +1,5 @@
 /* Copyright (c) 2024 by Monte Kietpawpan
- * measures.js | v1.0.2 July 30, 2024 
+ * encrypt.js | v1.0.3 August 3, 2024 
  * MIT License */
 
 
@@ -22,10 +22,10 @@ function dec(){
 var encrypted = document.getElementById('data2').value;
 var key = document.getElementById('key2').value;
 var decrypted = CryptoJS.AES.decrypt(encrypted, key);
-if(decrypted==""){document.getElementById('3').innerHTML = "<font color='red'><i class='fa fa-exclamation-triangle '></i> Incorrect key or encrypted data.</font>";document.getElementById('data3').innerHTML="";}
+if(decrypted==""){document.getElementById('3').innerHTML = "<center><font color='red'><i class='fa fa-exclamation-triangle '></i> Incorrect!</font></center>";document.getElementById('data3').innerHTML="";}
 else{document.getElementById('data3').innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
 document.getElementById('data3').style.height = document.getElementById('data3').scrollHeight + 'px';
-document.getElementById('3').innerHTML ="<font color='blue'><i class='fa fa-check-square '></i> Successfully decrypted.</font>";}
+document.getElementById('3').innerHTML ="<center><font color='RoyalBlue'><i class='fa fa-check-square '></i> Decrypted!</font></center>";}
 }
 
 function hash(){
@@ -44,9 +44,9 @@ function copy1(){
   document.execCommand('copy');
   element.setSelectionRange(0, 0);
   var popup = document.getElementById("c2");
-  popup.innerHTML ="<b>Copied!</b>";
+  popup.innerHTML ="<b><font color='RoyalBlue'>Copied!</font></b>";
   setTimeout(function () {
-  popup.innerHTML ="<i style='font-size:4vw;' class='fa fa-clone' onclick='copy1()'></i>";}, 1200);
+  popup.innerHTML ="<i class='fa fa-clone' onclick='copy1()'></i>";}, 1200);
  }
 	
 function copy2(){
@@ -56,9 +56,9 @@ function copy2(){
   document.execCommand('copy');
   element.setSelectionRange(0, 0);
   var popup = document.getElementById("c4");
-  popup.innerHTML ="<b>Copied!</b>";
+  popup.innerHTML ="<b><font color='RoyalBlue'>Copied!</font></b>";
   setTimeout(function () {
-  popup.innerHTML ="<i style='font-size:4vw;' class='fa fa-clone' onclick='copy2()'></i>";}, 1200);
+  popup.innerHTML ="<i class='fa fa-clone' onclick='copy2()'></i>";}, 1200);
 
 }
 
@@ -70,9 +70,9 @@ function copy3(){
   element.setSelectionRange(0, 0);
   /* window.alert("Copied!"); */
   var popup = document.getElementById("c3");
-  popup.innerHTML ="<b>Copied!</b>";
+  popup.innerHTML ="<b><font color='RoyalBlue'>Copied!</font></b>";
   setTimeout(function () {
-  popup.innerHTML ="<i style='font-size:4vw;' class='fa fa-clone' onclick='copy3()'></i>";}, 1200);
+  popup.innerHTML ="<i class='fa fa-clone' onclick='copy3()'></i>";}, 1200);
 
 }
 
@@ -84,9 +84,9 @@ function copyPK(){
   element.setSelectionRange(0, 0);
   /* window.alert("Copied!"); */
   var popup = document.getElementById("c1");
-  popup.innerHTML ="<b>Copied!</b>";
+  popup.innerHTML ="<b><font color='RoyalBlue'>Copied!</font></b>";
   setTimeout(function () {
-  popup.innerHTML ="<i style='font-size:4vw;' class='fa fa-clone' onclick='copyPK()'></i>";}, 1200);
+  popup.innerHTML ="<i class='fa fa-clone' onclick='copyPK()'></i>";}, 1200);
 }
 
 
