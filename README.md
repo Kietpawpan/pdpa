@@ -214,7 +214,7 @@ sequenceDiagram
 - [มาตการหลัก 5 ประการ](https://kietpawpan.github.io/pdpa/pMeasures.html)
 - [มาตการเข้ารหัสข้อมูลข่าวสารลับ](https://kietpawpan.github.io/pdpa/measures/encryp.html)
 
-# การประเมินความเสี่ยง
+## การประเมินความเสี่ยง
 เพื่อควบคุมให้มีความเสี่ยงต่ำหรือไม่มีนัยสำคัญ
 1. ถ้ามีผลกระทบต่อสิทธิเสรีภาพสูง ต้องทำให้ข้อมูลให้ระบุตัวตนไม่ได้ เช่น เข้ารหัส หรือปกปิดบางส่วน
 2. ถ้าข้อมูลจำเป็นต้องระบุตัวตนได้ ต้องทำให้มีผลกระทบต่ำ เช่น ปกปิดบางส่วน ป้องกันการเข้าถึง
@@ -250,7 +250,7 @@ quadrantChart
     Hashed National ID: [0.1, 0.34]
     Server Data Backup: [0.6, 0.1]
 ```
-# Information Assets
+## Information Assets
 ```mermaid
 block-beta
   columns 3
@@ -268,7 +268,7 @@ end
   	Folder Table Bin
 end
 ```
-# Risk Identification
+## Risk Identification
 ```mermaid
 stateDiagram
    direction TB
@@ -300,7 +300,7 @@ Receipt:::badBadEvent-->GetDocument:::badBadEvent
 GetDocument:::badBadEvent-->DestroyData:::badBadEvent
 DestroyData:::badBadEvent-->[*]
 ```
-# Key Risks with Email
+## Key Risks with Email
 ```mermaid
 mindmap
   Root((Mailbox))
