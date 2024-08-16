@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<title>Budhism | Cycle</title>
+<head>
+
+    <base target="_top">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=yes;" />
+
+</head>
+  <body><br/>
+<pre class="mermaid" style="margin-top:10px">
+---
+title: การลบทำลายข้อมูลส่วนบุคคลตามคำขอ
+---
+
+flowchart TD
+1{เจ้าของข้อมูลส่วนบุคคล\nยื่นคำขอให้ลบหรือทำลาย}-->|Yes|A{"ดำเนินตามคำขอ\n ครอบคลุมถึงสำเนา\n(ถ้ามี)ได้หรือไม่?"}
+A--Yes-->B{เก็บรวบรวมมา\nโดยชอบหรือไม่?}-->|No|C[["ลบหรือทำลาย\nตามคำขอเท่านั้น\n(ไม่อาจทำเป็นข้อมูล\nที่ระบุตัวตนไม่ได้)\nตามข้อ 7"]]-->C2([แจ้งเจ้าของทราบ\nตามข้อ 8 วรรคหนึ่ง])
+A-->|No|D([แจ้งให้เจ้าของทราบ\nพร้อมเหตุผล\nตามข้อ 8 วรรคสอง])
+B-->|Yes|B2{การลบทำลาย\nอาจกระทบหรือ\nประโยชน์ของบุคคลอื่น\nตามข้อ 5?}-->|No|E
+B2-->|Yes|B3([แจ้งให้เจ้าของทราบ\nพร้อมชี้แจงเหตุผล\nความจำเป็นที่สำคัญ\nตามข้อ 5])
+E[[ลบหรือทำลาย\nหรือทำให้\nระบุตัวตนไม่ได้\nตามข้อ 3-4 และเกณฑ์ข้อ 6\nโดยไม่ชักช้า]]
+E-->F{ดำเนินการได้\nภายใน 90 วัน\nเพราะเหตุทางเทคนิค?}-->|No|G[["ทำข้อมูลให้การเก็บ ใช้ \nเปิดเผย เป็นไปได้ยาก\nจัดให้มีมาตรการ\nเพื่อหลักเกณฑ์\nตามข้อ 4(1)-(5)"]]-->E-->E2{เป็นการทำให้\nระบุตัวตนไม่ได้?}-->|Yes|E3([แจ้งให้เจ้าของทราบ\nรายละเอียดการดำเนินการ\nตามสมควร \nตามข้อ 8 วรรคสอง])
+E2-->|No|C2
+1-->|No|S[["จัดให้มีระบบตรวจสอบเพื่อ\nลบทำลายตามมาตรา 37(3) ด้วย\nใช้ข้อ 3 วรรคสอง วรรคสาม \nข้อ 4-6 โดยอนุโลม \nตามข้อ 9"]]
+
+click D callback "ข้อ 8 วรรคสอง"
+click B "https://www.github.com" "This is a link"
+
+</pre>
+
+
+
+         
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+
+ <script>
+    window.callback = function () {
+      alert('A callback was triggered');
+    };
+    const config = {
+      startOnLoad: true,
+      flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'cardinal' },
+      securityLevel: 'loose',
+    };
+    mermaid.initialize(config);
+  </script>
+
+</body>
+
+  </body>
+</html>
